@@ -15,13 +15,13 @@
 @media screen and (max-width: 768px) { 
     form{display: grid;}
     h1{font-size: 25px;}
-    p{display: none;}
+    span p{display: none;}
     .intro{
         bottom: -60%;
         position: relative;
         }
     video{display: none;}
-    header{background-color: black;}
+    header{background-color: #071927;}
 }
 @media screen and (min-width: 834px)
  { 
@@ -48,6 +48,7 @@ body
     font-size: 20px;
     margin: 0;
     text-rendering: optimizeLegibility;
+    color: #020f18;
 }
 
 
@@ -116,7 +117,7 @@ input[type=submit]
 
 input[type=submit]:hover 
 { 
-    box-shadow: 200px 0 0 0 rgba(240, 36, 36, 0.849)inset;
+    box-shadow: 400px 0 0 0 rgba(240, 36, 36, 0.849)inset;
 }
 
 input, select
@@ -171,10 +172,11 @@ nav{
     margin: 20px;
     left: 0;
     right: 0;
-    position: absolute;
+    position: fixed;
     display: flex;
     color: aliceblue;
     background: #020f18;
+    z-index: 1;
   }
   
   nav a {
@@ -206,7 +208,6 @@ nav{
         display:none;   
     }
      
-  
     li:hover > ul {
         display:block; 
         width: 250px;
@@ -214,5 +215,106 @@ nav{
    li:hover > ul > li {
         float:none; 
     }
+
+    
     main{margin: 20px;}
 
+
+    .information
+    {
+        flex-wrap: wrap;
+        text-align: center;
+        border: 0 0 0 2px solid #020f18;
+    }
+
+    .flip-card {
+        height: auto;
+        margin: 20px auto 0 auto;
+        display: inline-block;
+      }
+    
+    
+    .flip-card img 
+    {
+       
+        width: 300px;
+        border: 5px solid aliceblue;
+        height: 300px;
+        text-align: center;
+        left: 5%;
+    }
+    
+   
+    .flipper 
+    {  
+        align-items: center;
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        width: 350px;
+        margin: 10px;
+        height: 400px;
+        transform-style: preserve-3d;
+        transition: .7s linear;  
+    }
+    .front, .back 
+    {
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+    
+    .front 
+    {
+      z-index: 2;
+      transform: rotateY(0deg);
+      background-color: white;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+
+    .front h3 
+    {
+        line-height: 15px;
+        position: relative;
+       
+    }
+
+    .back 
+    {
+        background-color: white;
+        transform: rotateY(-180deg);
+        overflow:auto;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+    
+    .back h3 {position: relative;}
+
+
+    .back h3:after
+    {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        background: white; 
+    }
+
+    .back p {
+        font-size: 14pt;
+        padding: 0 10px;
+        padding-top: 15px;
+        overflow:auto;
+    }
+
+    .flipper:hover {transform: rotateY(180deg);}
+    h2{text-decoration: underline;}
+
+    figure
+    {
+        display: inline-block;
+    }
+    
