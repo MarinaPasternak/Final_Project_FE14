@@ -313,8 +313,23 @@ nav{
     .flipper:hover {transform: rotateY(180deg);}
     h2{text-decoration: underline;}
 
-    figure
+    .rooms
     {
-        display: inline-block;
+        text-align: center;
+       
+    }
+    figure{display: inline-block; }
+
+    figcaption{text-align: left;}
+    
+    .slid{
+        position: absolute;
+        margin: auto;
     }
     
+    .showing{
+        opacity: 1;
+        z-index: 2;
+    }
+    
+  
