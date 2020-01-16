@@ -22,6 +22,7 @@
         }
     video{display: none;}
     header{background-color: #071927;}
+    .events figure{width: 100%; margin: auto;}
 }
 @media screen and (min-width: 834px)
  { 
@@ -30,7 +31,7 @@
         bottom: 0;
         position: absolute;
     }
-
+    .events figure{width: 28%;}
  }
 
 
@@ -49,6 +50,7 @@ body
     margin: 0;
     text-rendering: optimizeLegibility;
     color: #020f18;
+    background: #f6f5fb;
 }
 
 
@@ -103,7 +105,7 @@ span h1
 }
     
 
-input[type=submit]
+input[type=submit], button
 {
     padding: 10px 20px;
     background: #020f18;
@@ -179,157 +181,206 @@ nav{
     z-index: 1;
   }
   
-  nav a {
-	  color:white;
-      text-decoration: none;
-	}
+nav a 
+{
+	color:white;
+    text-decoration: none;
+}
 	
-	nav ul {
-	  text-align: center;
-	  margin: 0;
-      padding: 0;
-      margin: 10px;
-      display: flex;
-      
-	}
+nav ul 
+{
+	text-align: center;
+	margin: 0;
+    padding: 0;
+    margin: 10px;
+    display: flex;
+}
 
-	nav li { 
-		list-style: none;
-        margin: 10px;
-        padding: 4px;
-        border-width: 0px 1px;
-        border-style: solid;
-        position:relative;
-        text-align: center;
-        background-color:  #020f18;;
-	}
-    li > ul {
-        position:absolute;
-        display:none;   
-    }
+nav li
+{ 
+	list-style: none;
+    margin: 10px;
+    padding: 4px;
+    border-width: 0px 1px;
+    border-style: solid;
+    position:relative;
+    text-align: center;
+    background-color:  #020f18;;
+}
+li > ul 
+{
+    position:absolute;
+    display:none;   
+}
      
-    li:hover > ul {
-        display:block; 
-        width: 250px;
-    }
-   li:hover > ul > li {
-        float:none; 
-    }
+li:hover > ul {
+    display:block; 
+    width: 250px;
+}
+li:hover > ul > li 
+{
+    float:none; 
+}   
+main{margin: 20px;}
 
+.information
+{
+    flex-wrap: wrap;
+    text-align: center;
+    border: 0 0 0 2px solid #020f18;
+}
+
+.flip-card 
+{
+    height: auto;
+    margin: 20px auto 0 auto;
+    display: inline-block;
+}
     
-    main{margin: 20px;}
-
-
-    .information
-    {
-        flex-wrap: wrap;
-        text-align: center;
-        border: 0 0 0 2px solid #020f18;
-    }
-
-    .flip-card {
-        height: auto;
-        margin: 20px auto 0 auto;
-        display: inline-block;
-      }
     
-    
-    .flip-card img 
-    {
-       
-        width: 300px;
-        border: 5px solid aliceblue;
-        height: 300px;
-        text-align: center;
-        left: 5%;
-    }
+.flip-card img 
+{
+    width: 300px;
+    border: 5px solid aliceblue;
+    height: 300px;
+    text-align: center;
+    left: 5%;
+}
     
    
-    .flipper 
-    {  
-        align-items: center;
-        display: inline-block;
-        text-align: center;
-        position: relative;
-        width: 350px;
-        margin: 10px;
-        height: 400px;
-        transform-style: preserve-3d;
-        transition: .7s linear;  
-    }
-    .front, .back 
-    {
-      box-sizing: border-box;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-    }
+.flipper 
+{  
+    align-items: center;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    width: 350px;
+    margin: 10px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: .7s linear;  
+}
+.front, .back 
+{
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
     
-    .front 
-    {
-      z-index: 2;
-      transform: rotateY(0deg);
-      background-color: white;
-      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    }
+.front 
+{
+    z-index: 2;
+    transform: rotateY(0deg);
+    background-color: white;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
 
-    .front h3 
-    {
-        line-height: 15px;
-        position: relative;
-       
-    }
+.front h3 
+{
+    line-height: 15px;
+    position: relative;   
+}
 
-    .back 
-    {
-        background-color: white;
-        transform: rotateY(-180deg);
-        overflow:auto;
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    }
+.back 
+{
+    background-color: white;
+    transform: rotateY(-180deg);
+    overflow:auto;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
     
-    .back h3 {position: relative;}
+.back h3 {position: relative;}
 
 
-    .back h3:after
-    {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        background: white; 
-    }
+.back h3:after
+{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    background: white; 
+}
 
-    .back p {
-        font-size: 14pt;
-        padding: 0 10px;
-        padding-top: 15px;
-        overflow:auto;
-    }
+.back p {
+    font-size: 14pt;
+    padding: 0 10px;
+    padding-top: 15px;
+    overflow:auto;
+}
 
-    .flipper:hover {transform: rotateY(180deg);}
-    h2{text-decoration: underline;}
+.flipper:hover {transform: rotateY(180deg);}
+h2
+{
+    text-decoration: underline;
+    text-align: center;
+}
 
-    .rooms
-    {
-        text-align: center;
-       
-    }
-    figure{display: inline-block; }
+.rooms
+{
+    text-align: center;   
+}
+figure{display: inline-block; }
 
-    figcaption{text-align: left;}
+figcaption{text-align: left;}
     
-    .slid{
-        position: absolute;
-        margin: auto;
-    }
+.slid
+{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
     
-    .showing{
-        opacity: 1;
-        z-index: 2;
-    }
+.showing
+{
+    opacity: 1;
+    z-index: 2;
+}
     
-  
+.page:not(:first-of-type) 
+{ 
+    display: none; 
+}
+
+.special ul{ 
+    display: inline;
+    margin: 10px;
+    list-style: none;
+}
+.special
+{
+    display:flex;
+    margin: auto;
+    width: fit-content;
+    margin-top:20px ;
+}
+.occasion
+{
+    background: white;
+    width: fit-content;
+    margin: 10px;
+    padding: 10px;
+}
+.events h6
+{  
+    color: rgb(114, 114, 114);  
+    line-height: 1.6em;
+    font-size: 10pt;
+}
+.events p,h3,h6
+{
+    text-align: center;
+}
+.events figure
+{
+    background: white;
+    display: inline-block;
+    text-align: center;
+    
+}
+.events figure img{width:100%;}
+.events figcaption{padding:10px}

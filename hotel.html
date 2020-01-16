@@ -92,53 +92,55 @@
         </header>
         <main>
             
-            <div id='Info' class='information'>
-                <h2>About us</h2>
-                    <div class="flipper">
-                        <div class="front">
+            <button class="controls" onclick="previousSlide()" id="previous">&lt;</button>
+            <button class="controls" onclick="nextSlide()" id="next">&gt;</button>
+       
+                <div id='Info' class='information'>
+                    <p><h2>About us</h2>
+                        <div class="flipper">
+                            <div class="front">
+                                    <h3>Discover A Lakeside Escape</h3>
+                                <div class="flip-card">
+                                    <img src="img/0.jpg"/>
+                                </div>
+                            </div>
+                            <div class="back">
                                 <h3>Discover A Lakeside Escape</h3>
-                            <div class="flip-card">
-                                <img src="img/0.jpg"/>
+                                <p> Luxury independent five-star hotel founded in 1875, member of Preferred Hotels & Resorts, Le Richemond is a legend in Geneva. Ideally set on the shores of Lake Geneva, Le Richemond offers a breathtaking view on the emblematic Jet d’Eau and the highest Europe mountain Mont Blanc. In 2019, Le Richemond achieved a Five-Star Award by Forbes Travel Guide.   </p>
                             </div>
                         </div>
-                        <div class="back">
-                            <h3>Discover A Lakeside Escape</h3>
-                            <p> Luxury independent five-star hotel founded in 1875, member of Preferred Hotels & Resorts, Le Richemond is a legend in Geneva. Ideally set on the shores of Lake Geneva, Le Richemond offers a breathtaking view on the emblematic Jet d’Eau and the highest Europe mountain Mont Blanc. In 2019, Le Richemond achieved a Five-Star Award by Forbes Travel Guide.   </p>
-                        </div>
-                    </div>
 
-               
-                    <div class="flipper">
-                        <div class="front">
+                
+                        <div class="flipper">
+                            <div class="front">
+                                    <h3>Le Jardin</h3>
+                                <div class="flip-card">
+                                    <img src="img/2.jpg"/>
+                                </div>
+                            </div>
+                            <div class="back">
                                 <h3>Le Jardin</h3>
-                            <div class="flip-card">
-                                <img src="img/2.jpg"/>
+                                <p> At Le Jardin, Chef Philippe Bourrel shares a stylish, light and fresh French cuisine featuring the best of local products.
+                                    A unique experience starting from the amuse-bouche to Sébastien Quazzola's dessert creations, Pastry Chef of the Year 2019.</p>
                             </div>
                         </div>
-                        <div class="back">
-                            <h3>Le Jardin</h3>
-                            <p> At Le Jardin, Chef Philippe Bourrel shares a stylish, light and fresh French cuisine featuring the best of local products.
-                                A unique experience starting from the amuse-bouche to Sébastien Quazzola's dessert creations, Pastry Chef of the Year 2019.</p>
-                        </div>
-                    </div>
-                
+                    
 
-                
-                    <div class="flipper">
-                        <div class="front">
+                    
+                        <div class="flipper">
+                            <div class="front">
+                                    <h3>Relax & Revive</h3>
+                                <div class="flip-card">
+                                    <img src="img/4.jpg"/>
+                                </div>
+                            </div>
+                            <div class="back">
                                 <h3>Relax & Revive</h3>
-                            <div class="flip-card">
-                                <img src="img/4.jpg"/>
+                                <p> Welcome to the only exclusive Spa by Sisley in Switzerland.
+                                    Located in the centre of Geneva in a luxurious oasis, indulge in pampering spa treatments from acclaimed French skincare expert Sisley. For complete wellbeing, our state-of-the-art fitness studio features TechnoGym equipment for a full body workout.</p>
                             </div>
                         </div>
-                        <div class="back">
-                            <h3>Relax & Revive</h3>
-                            <p> Welcome to the only exclusive Spa by Sisley in Switzerland.
-                                Located in the centre of Geneva in a luxurious oasis, indulge in pampering spa treatments from acclaimed French skincare expert Sisley. For complete wellbeing, our state-of-the-art fitness studio features TechnoGym equipment for a full body workout.</p>
-                        </div>
-                    </div>
               
-
                 
                     <div class="flipper">
                         <div class="front">
@@ -157,47 +159,49 @@
             </div>
 
             <div class='rooms'>
-
-                <figure class='slid showing'>
-                    <img src="img/Superior_Room.jpg"/>
-                    <figcaption>
-                        <h3>Superior Room</h3>
-                        <ul>
-                            <li>One bedroom, one bathroom</li>
-                            <li>Reading area with desk</li>
-                            <li>City or courtyard view</li>
-                        </ul>
-                    </figcaption>
-                </figure>
-
-
-                <figure class='slid'>
-                    <img src="img/Deluxe_Room.jpg"/>
-                    <figcaption>
-                        <h3>Deluxe Room</h3>
-                        <ul>
-                            <li>One bedroom, one bathroom</li>
-                            <li>Reading area with desk</li>
-                            <li>City or courtyard view</li>
-                        </ul>
-                    </figcaption>
-                </figure>
+            <h2>Rooms</h2>
+            <h2>Pre-view</h2>
+            <div class ='page' id=page1>
+                            <figure>
+                                <img src="img/Superior_Room.jpg"/>
+                                <figcaption>
+                                    <h3>Superior Room</h3>
+                                    <ul>
+                                        <li>One bedroom, one bathroom</li>
+                                        <li>Reading area with desk</li>
+                                        <li>City or courtyard view</li>
+                                    </ul>
+                                </figcaption>
+                            </figure>
 
 
-                <figure class='slid'>
-                    <img src="img/Executive_Room.jpg"/>
-                    <figcaption>
-                        <h3>Executive Room</h3>
-                        <ul>
-                            <li>One bedroom, one bathroom</li>
-                            <li>Connecting room available</li>
-                            <li>City or courtyard view</li>
-                        </ul>
-                    </figcaption>
-                </figure>
+                            <figure>
+                                <img src="img/Deluxe_Room.jpg"/>
+                                <figcaption>
+                                    <h3>Deluxe Room</h3>
+                                    <ul>
+                                        <li>One bedroom, one bathroom</li>
+                                        <li>Reading area with desk</li>
+                                        <li>City or courtyard view</li>
+                                    </ul>
+                                </figcaption>
+                            </figure>
 
 
-                <figure class='slid'>
+                            <figure>
+                                <img src="img/Executive_Room.jpg"/>
+                                <figcaption>
+                                    <h3>Executive Room</h3>
+                                    <ul>
+                                        <li>One bedroom, one bathroom</li>
+                                        <li>Connecting room available</li>
+                                        <li>City or courtyard view</li>
+                                    </ul>
+                                </figcaption>
+                            </figure>
+            </div>
+            <div class ='page' id='page2'>
+                <figure>
                     <img src="img/Executive_Garden.jpg"/>
                     <figcaption>
                         <h3>Executive Garden View Room</h3>
@@ -210,7 +214,7 @@
                 </figure>
 
 
-                <figure class='slid'>
+                <figure>
                     <img src="img/Premium_Lake.jpg"/>
                     <figcaption>
                         <h3>Premium Lake View Room</h3>
@@ -223,7 +227,7 @@
                 </figure>
 
                 
-                <figure class='slid'>
+                <figure>
                     <img src="img/Junior_Suite.jpg"/>
                     <figcaption>
                         <h3>Junior Suite</h3>
@@ -234,9 +238,9 @@
                         </ul>
                     </figcaption>
                 </figure>
-
-
-                <figure class='slid'>
+            </div>
+            <div class ='page' id='page3'>
+                <figure>
                     <img src="img/Lake_View.jpg"/>
                     <figcaption>
                         <h3>Lake View Junior Suite</h3>
@@ -249,7 +253,7 @@
                 </figure>
 
 
-                <figure class='slid'>
+                <figure>
                     <img src="img/Premium_Lake_View_Suite.jpg"/>
                     <figcaption>
                         <h3>Premium Lake View Suite</h3>
@@ -261,7 +265,7 @@
                     </figcaption>
                 </figure>
 
-                <figure class='slid'>
+                <figure>
                     <img src="img/Ambassador_Suite.jpg"/>
                     <figcaption>
                         <h3>Ambassador Suite</h3>
@@ -272,46 +276,135 @@
                         </ul>
                     </figcaption>
                 </figure>
+            </div>
+            <div class ='page' id='page4'>
+                            <figure >
+                                <img src="img/LRG_Presidential.jpg"/>
+                                <figcaption>
+                                    <h3>Presidential Suite</h3>
+                                    <ul>
+                                        <li>One bedroom</li>
+                                        <li>Complimentary return transfers</li>
+                                        <li>Bottle of champagne</li>
+                                    </ul>
+                                </figcaption>
+                            </figure>
 
-                <figure class='slid'>
-                    <img src="img/LRG_Presidential.jpg"/>
-                    <figcaption>
-                        <h3>Presidential Suite</h3>
-                        <ul>
-                            <li>One bedroom</li>
-                            <li>Complimentary return transfers</li>
-                            <li>Bottle of champagne</li>
-                        </ul>
-                    </figcaption>
-                </figure>
 
-
-                <figure class='slid'>
-                    <img src="img/Royal_Armleder.jpg"/>
-                    <figcaption>
-                        <h3>Royal Armleder Suite</h3>
-                        <ul>
-                            <li>One bedroom</li>
-                            <li>Complimentary return transfers</li>
-                            <li>Bottle of champagne</li>
-                        </ul>
-                    </figcaption>
-                </figure>
-
-                <button class="controls" onclick="previousSlide()" id="previous">&lt;</button>
-                <button class="controls" onclick="nextSlide()" id="next">&gt;</button>
-
+                            <figure>
+                                <img src="img/Royal_Armleder.jpg"/>
+                                <figcaption>
+                                    <h3>Royal Armleder Suite</h3>
+                                    <ul>
+                                        <li>One bedroom</li>
+                                        <li>Complimentary return transfers</li>
+                                        <li>Bottle of champagne</li>
+                                    </ul>
+                                </figcaption>
+                            </figure>
+            </div>
+            <div class="pagination_bar"> 
+                <button onclick="paginationArrowBack()" class='page_num'>&laquo;</button>
+                <button class='btnPagin' id='1'onclick="paginationButton(this)">1</button>
+                <button class='btnPagin'id='2' onclick="paginationButton(this)">2</button>
+                <button class='btnPagin'id='3' onclick="paginationButton(this)">3</button>
+                <button class='btnPagin'id='4' onclick="paginationButton(this)">4</button>
+                <button onclick="paginationArrowNext()" class='page_num'>&raquo;</button>
+            </div>  
+            </div>
             </div>
 
 
             <div class= special>
-                
-                    <div>
+                    <div class='occasion'>
+                        <h2>Resturant</h2>
+                       <ul>
+                            <caption><h4>Awards</h4></caption>
+                            <li>17/20 Gault & Millau Guide 2020</li>
+                            <li>Pastry Chef of the Year 2019 - Gault & Millau</li>
+                            <li>Ambassadeur du Terroir Genevois </li>
+                            <li>Assiette Michelin</li>
+                        </ul>
+                        <ul>
+                            <caption><h4>Working days</h4></caption>
+                            <li>Open everyday - from Monday to Sunday.</li>
+                            <li>Breakfast: 7am - 10.30am</li>
+                            <li>Lunch: 12pm - 2pm</li>
+                            <li>Dinner: 7pm - 10pm</li>
+                        </ul>
                         
                     </div>
-                    <div>
-                        
-                    </div> 
+
+                    <div class='occasion'>
+                        <h2>Relax & Revive</h2>
+                        <ul>
+                            <caption><h4>Awards</h4></caption>
+                            <li>Fitness memberships</li>
+                        </ul>
+                        <ul>
+                            <caption><h4>Working days</h4></caption>
+                            <li>17/20 Gault & Millau Guide 2020</li>
+                            <li>Fitness studio open daily from 7am to 10pm.</li>
+                        </ul>
+                    </div>  
+                </div>
+            <div class='events'>
+                <figure>
+                    <img src="img/oc1.jpg"/>
+                    <figcaption>
+                        <h6>FROM DECEMBER 17, 2019 TO JANUARY 1, 2020</h6>
+                        <h3>The Christmas Log</h3>
+                        <p>For the holidays, the Swiss Pastry Chef of the year 2019 has imagined a christmas log that is taste as good as it looks!</p>
+                        <p>Gruyère double cream, acidulated swiss meringue, hazelnut chocolate, crispy praliné sesame & salted butter caramel.</p>
+                        <p>Serves up to 8 people | Orders from</p>
+                        <p>Available from December 17, 2019 to January 1, 2020</p>
+                        <p>CHF 69</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="img/oc2.jpg"/>
+                    <figcaption>
+                        <h6>DECEMBER 24 & 31</h6>
+                        <h3>A Taste of Festive Season</h3>
+                        <p>For the most special time of the year, Le jardin welcomes you with special menus created by our Chef Philippe Bourrel along with our Pastry Chef Sébastien Quazzola.</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="img/oc3.jpg"/>
+                    <figcaption>
+                        <h6>FROM DECEMBER 17, 2019 TO JANUARY 1, 2020</h6>
+                        <h3>The Christmas Log</h3>
+                        <p>For the holidays, the Swiss Pastry Chef of the year 2019 has imagined a christmas log that is taste as good as it looks!</p>
+                        <p>Gruyère double cream, acidulated swiss meringue, hazelnut chocolate, crispy praliné sesame & salted butter caramel.</p>
+                        <p>Serves up to 8 people | Orders from</p>
+                        <p>Available from December 17, 2019 to January 1, 2020</p>
+                        <p>CHF 69</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="img/oc4.jpg"/>
+                    <figcaption>
+                        <h6>FROM DECEMBER 17, 2019 TO JANUARY 1, 2020</h6>
+                        <h3>The Christmas Log</h3>
+                        <p>For the holidays, the Swiss Pastry Chef of the year 2019 has imagined a christmas log that is taste as good as it looks!</p>
+                        <p>Gruyère double cream, acidulated swiss meringue, hazelnut chocolate, crispy praliné sesame & salted butter caramel.</p>
+                        <p>Serves up to 8 people | Orders from</p>
+                        <p>Available from December 17, 2019 to January 1, 2020</p>
+                        <p>CHF 69</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="img/oc5.jpg"/>
+                    <figcaption>
+                        <h6>FROM DECEMBER 17, 2019 TO JANUARY 1, 2020</h6>
+                        <h3>The Christmas Log</h3>
+                        <p>For the holidays, the Swiss Pastry Chef of the year 2019 has imagined a christmas log that is taste as good as it looks!</p>
+                        <p>Gruyère double cream, acidulated swiss meringue, hazelnut chocolate, crispy praliné sesame & salted butter caramel.</p>
+                        <p>Serves up to 8 people | Orders from</p>
+                        <p>Available from December 17, 2019 to January 1, 2020</p>
+                        <p>CHF 69</p>
+                    </figcaption>
+                </figure>
             </div>
             
             <div class='order'>
