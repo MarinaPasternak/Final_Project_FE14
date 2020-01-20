@@ -14,12 +14,12 @@
                 <source src="img/Richemond.webm" type="video/webm"></source>
             </video> 
 
-            <nav>
+            <nav role='navigation'>
                 <ul>
-                    <li><a href="#Info">About us</a></li>
-                    <li><a href="">Rooms</a>
+                    <li><a href="#Info" onclick="webUrlChange()">About us</a></li>
+                    <li><a href="#rooms" onclick="webUrlChange()">Rooms</a>
                         <ul>
-                            <li><a href="">Pre-view</a></li>
+                            <li><a href="">Preview</a></li>
                             <li><a href="">Order room</a></li>
                         </ul>
                     </li>
@@ -28,6 +28,7 @@
                          <li><a href="">SPA</a></li>
                             <li><a href="">Resturan</a></li>
                             <li><a href="">MEETING & EVENTS</a></li>
+                            <li><a href="">Special offers</a></li>
 
                         </ul>
                     </li>
@@ -84,21 +85,19 @@
                             <option>4</option>
                         </select>
                     </label>
-                    <input type="submit" value="Surch">
+                    <input type="submit" value="Search">
                     <h4><a href="">ADVANCED SEARCH</a></h4>
                 </form>
         </div> 
          
         </header>
-        <main>
-            
-            <button class="controls" onclick="previousSlide()" id="previous">&lt;</button>
-            <button class="controls" onclick="nextSlide()" id="next">&gt;</button>
-       
-                <div id='Info' class='information'>
-                    <p><h2>About us</h2>
-                        <div class="flipper">
-                            <div class="front">
+        <main> 
+            <div id='Info' class='information'>
+                <button class="controls" onclick="previousSlide()" id="previous">&lt;</button>
+                <button class="controls" onclick="nextSlide()" id="next">&gt;</button>
+                <p><h2>About us</h2>
+                    <div class="flipper">
+                        <div class="front">
                                     <h3>Discover A Lakeside Escape</h3>
                                 <div class="flip-card">
                                     <img src="img/0.jpg"/>
@@ -158,7 +157,7 @@
 
             </div>
 
-            <div class='rooms'>
+            <div id='rooms' class='rooms'>
             <h2>Rooms</h2>
             <h2>Pre-view</h2>
             <div class ='page' id=page1>
@@ -304,12 +303,10 @@
                             </figure>
             </div>
             <div class="pagination_bar"> 
-                <button onclick="paginationArrowBack()" class='page_num'>&laquo;</button>
-                <button class='btnPagin' id='1'onclick="paginationButton(this)">1</button>
-                <button class='btnPagin'id='2' onclick="paginationButton(this)">2</button>
-                <button class='btnPagin'id='3' onclick="paginationButton(this)">3</button>
-                <button class='btnPagin'id='4' onclick="paginationButton(this)">4</button>
-                <button onclick="paginationArrowNext()" class='page_num'>&raquo;</button>
+                <button class='btnPagin' id='1'onclick="pagination(this)">1</button>
+                <button class='btnPagin'id='2' onclick="pagination(this)">2</button>
+                <button class='btnPagin'id='3' onclick="pagination(this)">3</button>
+                <button class='btnPagin'id='4' onclick="pagination(this)">4</button>
             </div>  
             </div>
             </div>
@@ -347,8 +344,24 @@
                             <li>Fitness studio open daily from 7am to 10pm.</li>
                         </ul>
                     </div>  
-                </div>
+
+                <div class='occasion'>
+                    <h2>Le Richemond offers</h2>
+                    <ul>
+                        <li>– Five flexible meeting spaces for your corporate meetings (all technically equipped).</li>
+                        <li>– The opportunity to enjoy private dining in Geneva’s city centre.</li>
+                        <li>– Some of the most exclusive reception venues in Geneva.</li>
+                        <li>– Delegates can look forward to delicious cuisine at Le Jardin, Le Bar or in the private salons.</li>
+                    </ul>
+                    <h3>Outside Catering</h3>
+                    <p>Our Banqueting Chef Gilles Robert prepares tailored catering (cocktail pieces, menus, buffets) for your events to meet your every needs.</p>
+                </div>  
+            </div>
+
             <div class='events'>
+                <h2>Meetings, Events
+                    & Outside Catering Service
+                    at Le Richemond</h2>
                 <figure>
                     <img src="img/oc1.jpg"/>
                     <figcaption>
@@ -406,7 +419,10 @@
                     </figcaption>
                 </figure>
             </div>
-            
+             <div class='events'>
+                 <h2>Special offers</h2>
+                 <div></div>
+             </div>
             <div class='order'>
                 
             </div>
