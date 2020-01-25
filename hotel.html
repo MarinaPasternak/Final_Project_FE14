@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Le Richemond</title>
   <link href="styles.css" rel="stylesheet">
-  <script type="text/javascript" src="functions.js"></script>
+  
  </head>
     <body>
         <header>
@@ -17,17 +17,12 @@
             <nav role='navigation'>
                 <ul>
                     <li><a href="#Info" onclick="webUrlChange()">About us</a></li>
-                    <li><a href="#rooms" onclick="webUrlChange()">Rooms</a>
+                    <li><a href="#rooms" onclick="webUrlChange()">Rooms</a></li>
+                    <li><a href="#special">Special</a>
                         <ul>
-                            <li><a href="">Preview</a></li>
-                            <li><a href="">Order room</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="">Special</a>
-                        <ul>
-                         <li><a href="">SPA</a></li>
+                         <li><a href="#SPA">SPA</a></li>
                             <li><a href="">Resturan</a></li>
-                            <li><a href="">MEETING & EVENTS</a></li>
+                            <li><a href="#events">MEETING & EVENTS</a></li>
                             <li><a href="">Special offers</a></li>
 
                         </ul>
@@ -35,8 +30,6 @@
                     <li><a href="">Contacts</a></li>
                 </ul>
             </nav>
-
-             
 
             <div class='intro'>
                 <span>
@@ -48,7 +41,6 @@
                </span>
 
                 <form>
-
                     <label>
                             Arrival <input type="date" атрибуты>
                     </label>
@@ -88,7 +80,7 @@
                     <input type="submit" value="Search">
                     <h4><a href="">ADVANCED SEARCH</a></h4>
                 </form>
-        </div> 
+            </div> 
          
         </header>
         <main> 
@@ -160,32 +152,30 @@
             <div id='rooms' class='rooms'>
             <h2>Rooms</h2>
             <h2>Pre-view</h2>
-            <div class ='page' id=page1>
-                            <figure>
-                                <img src="img/Superior_Room.jpg"/>
-                                <figcaption>
-                                    <h3>Superior Room</h3>
-                                    <ul>
-                                        <li>One bedroom, one bathroom</li>
-                                        <li>Reading area with desk</li>
-                                        <li>City or courtyard view</li>
-                                    </ul>
-                                </figcaption>
-                            </figure>
+            
+                        <figure>
+                            <img src="img/Superior_Room.jpg"/>
+                            <figcaption>
+                                <h3>Superior Room</h3>
+                                <ul>
+                                    <li>One bedroom, one bathroom</li>
+                                    <li>Reading area with desk</li>
+                                    <li>City or courtyard view</li>
+                                </ul>
+                            </figcaption>
+                        </figure>
 
-
-                            <figure>
-                                <img src="img/Deluxe_Room.jpg"/>
-                                <figcaption>
-                                    <h3>Deluxe Room</h3>
-                                    <ul>
-                                        <li>One bedroom, one bathroom</li>
-                                        <li>Reading area with desk</li>
-                                        <li>City or courtyard view</li>
-                                    </ul>
-                                </figcaption>
-                            </figure>
-
+                        <figure>
+                            <img src="img/Deluxe_Room.jpg"/>
+                            <figcaption>
+                                <h3>Deluxe Room</h3>
+                                <ul>
+                                    <li>One bedroom, one bathroom</li>
+                                    <li>Reading area with desk</li>
+                                    <li>City or courtyard view</li>
+                                </ul>
+                            </figcaption>
+                        </figure>
 
                             <figure>
                                 <img src="img/Executive_Room.jpg"/>
@@ -198,151 +188,141 @@
                                     </ul>
                                 </figcaption>
                             </figure>
-            </div>
-            <div class ='page' id='page2'>
-                <figure>
-                    <img src="img/Executive_Garden.jpg"/>
-                    <figcaption>
-                        <h3>Executive Garden View Room</h3>
-                        <ul>
-                            <li>One bedroom, one bathroom</li>
-                            <li>Connecting room available</li>
-                            <li>Partial Lake view, facing Brunswick </li>
-                        </ul>
-                    </figcaption>
-                </figure>
+            
+                    <figure>
+                        <img src="img/Executive_Garden.jpg"/>
+                        <figcaption>
+                            <h3>Executive Garden View Room</h3>
+                            <ul>
+                                <li>One bedroom, one bathroom</li>
+                                <li>Connecting room available</li>
+                                <li>Partial Lake view, facing Brunswick </li>
+                            </ul>
+                        </figcaption>
+                    </figure>
 
 
-                <figure>
-                    <img src="img/Premium_Lake.jpg"/>
-                    <figcaption>
-                        <h3>Premium Lake View Room</h3>
-                        <ul>
-                            <li>One bedroom, one bathroom</li>
-                            <li>Connecting room available</li>
-                            <li>Lake view and balcony</li>
-                        </ul>
-                    </figcaption>
-                </figure>
+                    <figure>
+                        <img src="img/Premium_Lake.jpg"/>
+                        <figcaption>
+                            <h3>Premium Lake View Room</h3>
+                            <ul>
+                                <li>One bedroom, one bathroom</li>
+                                <li>Connecting room available</li>
+                                <li>Lake view and balcony</li>
+                            </ul>
+                        </figcaption>
+                    </figure>
 
+                    
+                    <figure>
+                        <img src="img/Junior_Suite.jpg"/>
+                        <figcaption>
+                            <h3>Junior Suite</h3>
+                            <ul>
+                                <li>One bedroom</li>
+                                <li>Complimentary Wi-Fi</li>
+                                <li>Elegant contemporary style</li>
+                            </ul>
+                        </figcaption>
+                    </figure>
+            
                 
-                <figure>
-                    <img src="img/Junior_Suite.jpg"/>
-                    <figcaption>
-                        <h3>Junior Suite</h3>
-                        <ul>
-                            <li>One bedroom</li>
-                            <li>Complimentary Wi-Fi</li>
-                            <li>Elegant contemporary style</li>
-                        </ul>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class ='page' id='page3'>
-                <figure>
-                    <img src="img/Lake_View.jpg"/>
-                    <figcaption>
-                        <h3>Lake View Junior Suite</h3>
-                        <ul>
-                            <li>One bedroom</li>
-                            <li>Complimentary Wi-Fi</li>
-                            <li>Lake view and balcony</li>
-                        </ul>
-                    </figcaption>
-                </figure>
+                    <figure>
+                        <img src="img/Lake_View.jpg"/>
+                        <figcaption>
+                            <h3>Lake View Junior Suite</h3>
+                            <ul>
+                                <li>One bedroom</li>
+                                <li>Complimentary Wi-Fi</li>
+                                <li>Lake view and balcony</li>
+                            </ul>
+                        </figcaption>
+                    </figure>
 
+                    <figure>
+                        <img src="img/Premium_Lake_View_Suite.jpg"/>
+                        <figcaption>
+                            <h3>Premium Lake View Suite</h3>
+                            <ul>
+                                <li>One bedroom</li>
+                                <li>Additional room may be added</li>
+                                <li>Lake view and balcony</li>
+                            </ul>
+                        </figcaption>
+                    </figure>
 
-                <figure>
-                    <img src="img/Premium_Lake_View_Suite.jpg"/>
-                    <figcaption>
-                        <h3>Premium Lake View Suite</h3>
-                        <ul>
-                            <li>One bedroom</li>
-                            <li>Additional room may be added</li>
-                            <li>Lake view and balcony</li>
-                        </ul>
-                    </figcaption>
-                </figure>
-
-                <figure>
-                    <img src="img/Ambassador_Suite.jpg"/>
-                    <figcaption>
-                        <h3>Ambassador Suite</h3>
-                        <ul>
-                            <li>One bedroom, additional room may be added</li>
-                            <li>Complimentary return transfers</li>
-                            <li>Bottle of champagne</li>
-                        </ul>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class ='page' id='page4'>
-                            <figure >
-                                <img src="img/LRG_Presidential.jpg"/>
-                                <figcaption>
-                                    <h3>Presidential Suite</h3>
+                    <figure>
+                        <img src="img/Ambassador_Suite.jpg"/>
+                        <figcaption>
+                            <h3>Ambassador Suite</h3>
+                            <ul>
+                                <li>One bedroom, additional room may be added</li>
+                                <li>Complimentary return transfers</li>
+                                <li>Bottle of champagne</li>
+                            </ul>
+                        </figcaption>
+                    </figure>
+                    <figure >
+                        <img src="img/LRG_Presidential.jpg"/>
+                            <figcaption>
+                                <h3>Presidential Suite</h3>
                                     <ul>
                                         <li>One bedroom</li>
                                         <li>Complimentary return transfers</li>
                                         <li>Bottle of champagne</li>
                                     </ul>
-                                </figcaption>
-                            </figure>
-
-
-                            <figure>
-                                <img src="img/Royal_Armleder.jpg"/>
-                                <figcaption>
-                                    <h3>Royal Armleder Suite</h3>
-                                    <ul>
-                                        <li>One bedroom</li>
-                                        <li>Complimentary return transfers</li>
-                                        <li>Bottle of champagne</li>
-                                    </ul>
-                                </figcaption>
-                            </figure>
-            </div>
-            <div class="pagination_bar"> 
-                <button class='btnPagin' id='1'onclick="pagination(this)">1</button>
-                <button class='btnPagin'id='2' onclick="pagination(this)">2</button>
-                <button class='btnPagin'id='3' onclick="pagination(this)">3</button>
-                <button class='btnPagin'id='4' onclick="pagination(this)">4</button>
-            </div>  
-            </div>
+                            </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/Royal_Armleder.jpg"/>
+                        <figcaption>
+                            <h3>Royal Armleder Suite</h3>
+                                <ul>
+                                    <li>One bedroom</li>
+                                    <li>Complimentary return transfers</li>
+                                    <li>Bottle of champagne</li>
+                                </ul>
+                        </figcaption>
+                </figure>
+                
             </div>
 
-
-            <div class= special>
+            <div id='special' class= special>
                     <div class='occasion'>
                         <h2>Resturant</h2>
                        <ul>
                             <caption><h4>Awards</h4></caption>
-                            <li>17/20 Gault & Millau Guide 2020</li>
-                            <li>Pastry Chef of the Year 2019 - Gault & Millau</li>
-                            <li>Ambassadeur du Terroir Genevois </li>
-                            <li>Assiette Michelin</li>
+                            <li>– 17/20 Gault & Millau Guide 2020</li>
+                            <li>– Pastry Chef of the Year 2019 - Gault & Millau</li>
+                            <li>– Ambassadeur du Terroir Genevois </li>
+                            <li>– Assiette Michelin</li>
                         </ul>
                         <ul>
                             <caption><h4>Working days</h4></caption>
-                            <li>Open everyday - from Monday to Sunday.</li>
-                            <li>Breakfast: 7am - 10.30am</li>
-                            <li>Lunch: 12pm - 2pm</li>
-                            <li>Dinner: 7pm - 10pm</li>
+                            <li>– Open everyday - from Monday to Sunday.</li>
+                            <li>– Breakfast: 7am - 10.30am</li>
+                            <li>– Lunch: 12pm - 2pm</li>
+                            <li>– Dinner: 7pm - 10pm</li>
                         </ul>
-                        
+                        <button><a href="">LEARN MORE</a></button>
                     </div>
 
                     <div class='occasion'>
                         <h2>Relax & Revive</h2>
                         <ul>
-                            <caption><h4>Awards</h4></caption>
-                            <li>Fitness memberships</li>
+                            <caption><h4>Discription</h4></caption>
+                            <li>– Fitness memberships</li>
+                            <li>- 5 treatment rooms including a thai-themed treatment room</li>
+                            <li>– Relaxation room/steam room & sauna</li>
+                            <li>– Full range of treatments</li>
                         </ul>
                         <ul>
                             <caption><h4>Working days</h4></caption>
-                            <li>17/20 Gault & Millau Guide 2020</li>
-                            <li>Fitness studio open daily from 7am to 10pm.</li>
+                            <li>– 17/20 Gault & Millau Guide 2020</li>
+                            <li>– Fitness studio open daily from 7am to 10pm.</li>
                         </ul>
+                        <button><a href="">LEARN MORE</a></button>
                     </div>  
 
                 <div class='occasion'>
@@ -355,83 +335,115 @@
                     </ul>
                     <h3>Outside Catering</h3>
                     <p>Our Banqueting Chef Gilles Robert prepares tailored catering (cocktail pieces, menus, buffets) for your events to meet your every needs.</p>
+                    <button><a href="">LEARN MORE</a></button>
                 </div>  
             </div>
 
-            <div class='events'>
+            <div id='events' class='events'>
+
                 <h2>Meetings, Events
                     & Outside Catering Service
                     at Le Richemond</h2>
+
                 <figure>
-                    <img src="img/oc1.jpg"/>
+                    <img src="img/b1.jpg"/>
                     <figcaption>
-                        <h6>FROM DECEMBER 17, 2019 TO JANUARY 1, 2020</h6>
-                        <h3>The Christmas Log</h3>
-                        <p>For the holidays, the Swiss Pastry Chef of the year 2019 has imagined a christmas log that is taste as good as it looks!</p>
-                        <p>Gruyère double cream, acidulated swiss meringue, hazelnut chocolate, crispy praliné sesame & salted butter caramel.</p>
-                        <p>Serves up to 8 people | Orders from</p>
-                        <p>Available from December 17, 2019 to January 1, 2020</p>
-                        <p>CHF 69</p>
+                        <h6>FUP TO 280 GUESTS | 318M2</h6>
+                        <h4>Paul Klee & Galerie Rachmaninoff</h4>
+                        <p>A contemporary space ideally suited to product launches, gala dinners and larger conferences, the Paul Klee Salon measures 210 m2 (2,325 ft2) and can host a seated dinner for up to 200 guests, or a cocktail reception for 280 guests.</p>
+                        <p>The Paul Klee Salon is accessed via the Galerie Rachmaninoff, a dramatic walkway located beneath a glass ceiling.</p>
                     </figcaption>
+                    <button onclick="goToForm()">Pre-reservation request</button>
                 </figure>
+
                 <figure>
-                    <img src="img/oc2.jpg"/>
+                    <img src="img/b2.jpg"/>
                     <figcaption>
-                        <h6>DECEMBER 24 & 31</h6>
-                        <h3>A Taste of Festive Season</h3>
-                        <p>For the most special time of the year, Le jardin welcomes you with special menus created by our Chef Philippe Bourrel along with our Pastry Chef Sébastien Quazzola.</p>
+                        <h6>UP TO 100 GUESTS | 123M2</h6>
+                        <h4>Coppet and Chambésy Salon</h4>
+                        <p>Separated by a sliding soundproof partition, the two salons combine to form an elegant venue, hosting up to 100 guests for theatre seating. Filled with natural daylight, the salons measure 123 m2 (1,324 ft2) all together and are ideal for pre-event gatherings or boardroom meetings; they are located opposite the grand double doors of the ballroom for convenient access.</p>
                     </figcaption>
+                    <button onclick="goToForm()">Pre-reservation request</button>
                 </figure>
+
                 <figure>
-                    <img src="img/oc3.jpg"/>
+                    <img src="img/b3.jpg"/>
                     <figcaption>
-                        <h6>FROM DECEMBER 17, 2019 TO JANUARY 1, 2020</h6>
-                        <h3>The Christmas Log</h3>
-                        <p>For the holidays, the Swiss Pastry Chef of the year 2019 has imagined a christmas log that is taste as good as it looks!</p>
-                        <p>Gruyère double cream, acidulated swiss meringue, hazelnut chocolate, crispy praliné sesame & salted butter caramel.</p>
-                        <p>Serves up to 8 people | Orders from</p>
-                        <p>Available from December 17, 2019 to January 1, 2020</p>
-                        <p>CHF 69</p>
+                        <h6>FUP TO 120 GUESTS | 137M2</h6>
+                        <h4>Ballroom</h4>
+                        <p>A refined space measuring 137 m2 (1,475 ft2), decorated with trompe-l’oeil paintings, mirrored walls, magnificent parquet flooring and Murano glass chandeliers, the ballroom can host seated dinners for up to 80 guests, and cocktail for up to 120 guests.</p>
                     </figcaption>
+                    <button onclick="goToForm()">Pre-reservation request</button>
                 </figure>
+
                 <figure>
-                    <img src="img/oc4.jpg"/>
+                    <img src="img/b4.jpg"/>
                     <figcaption>
-                        <h6>FROM DECEMBER 17, 2019 TO JANUARY 1, 2020</h6>
-                        <h3>The Christmas Log</h3>
-                        <p>For the holidays, the Swiss Pastry Chef of the year 2019 has imagined a christmas log that is taste as good as it looks!</p>
-                        <p>Gruyère double cream, acidulated swiss meringue, hazelnut chocolate, crispy praliné sesame & salted butter caramel.</p>
-                        <p>Serves up to 8 people | Orders from</p>
-                        <p>Available from December 17, 2019 to January 1, 2020</p>
-                        <p>CHF 69</p>
+                        <h6>UP TO 40 GUESTS | 150M2</h6>
+                        <h4>Royal Armleder Suite</h4>
+                        <p>Located on the seventh floor, the sumptuous Royal Armleder Suite, measuring 150 m2 (1,615 ft2) offers a spacious living room with fireplace, a dining room for private entertaining and terraces with 360-degree views of Lake Geneva, the Old Town and snow-capped mountains. Light-filled rooms offer peerless comfort and contemporary décor complemented by artworks, antiques and modern furniture. Two beautifully furnished terraces enable guests to make the most of the view. This Royal Suite is perfect for private lunch or dinner up to 30 guests and cocktail up to 40 guests.</p>
                     </figcaption>
+                    <button onclick="goToForm()">Pre-reservation request</button>
                 </figure>
-                <figure>
-                    <img src="img/oc5.jpg"/>
-                    <figcaption>
-                        <h6>FROM DECEMBER 17, 2019 TO JANUARY 1, 2020</h6>
-                        <h3>The Christmas Log</h3>
-                        <p>For the holidays, the Swiss Pastry Chef of the year 2019 has imagined a christmas log that is taste as good as it looks!</p>
-                        <p>Gruyère double cream, acidulated swiss meringue, hazelnut chocolate, crispy praliné sesame & salted butter caramel.</p>
-                        <p>Serves up to 8 people | Orders from</p>
-                        <p>Available from December 17, 2019 to January 1, 2020</p>
-                        <p>CHF 69</p>
-                    </figcaption>
-                </figure>
-            </div>
-             <div class='events'>
-                 <h2>Special offers</h2>
-                 <div></div>
-             </div>
-            <div class='order'>
+
+                <div class='occasion'>
+                        <h2>Your wedding at Le Richemond</h2>
+                       <p>Your wedding day is one of the most important days in your lifetime,  a special time to be shared with family and friends.</p>
+                       <p>Le Richemond provides a stylish venue to tie the knot or celebrate your marriage, where unsurpassed service and attention to detail are our specialities.</p>
+                       <p>Our profesionnal and enthusiastic wedding planner will be by your side to plan every detail to make your event unforgettable: wedding announcement, floral decoration, entertainment...</p>
+                       <p>Our team will be delighted to meet you and discuss your thoughts.</p>
+                       <button onclick="goToForm()">Make a wish</button>
+                </div>
+
+                <div class='occasion'>
+                    <h2>End of year's parties & Outside Catering Service</h2>
+                   <p>Our banqueting Chef Gilles Robert has designed a selection of menus for delicious events - at the hotel or at your home.</p>
+                   <p>Kosher menus on request,</p>
+                   <p>under the guidance of Grand-Rabbin Schlessinger.</p>
+                    <button><a href="https://www.lerichemond.com/application/files/5015/6259/7212/Le_Richemond_-_menus_de_fin_dannee_2019.pdf" target="_blank">Discover our end of year menus </a></button>
+                </div>
                 
+                <div id="tablePrice">
+                    <button onclick="createTable()">
+                       Price list
+                    </button>
+                </div>
+
+                <form id='reserv' class='formReserv'>
+                    <input type='text' placeholder='Title'>
+                    <input type='tel' placeholder='Phone number*'>
+                    <input type='text' placeholder='First name*'>
+                    <input type='email' placeholder='Email'>
+                    <input type='text' placeholder='Last name*'> 
+                    <input type="text" id="addInfo" placeholder='Meeting room'>
+                    <label>
+                        Resarvation date
+                        <input type='date'>
+                    </label>
+                    <label>
+                        Resarvation time
+                        <input type='time'>
+                    <label>
+                   
+                    <p><label>
+                    <input type="checkbox" >
+                        I accept to be contacted as per my above request. 
+                         My information can be used for sale purposes.
+                    </label></p>
+                    <input type="submit" value="Search">
+                </form>
+
             </div>
 
+            <div id='SPA' class='events'></div>
+
+            <div id='Resturan' class='events'></div>
+ 
         </main>
 
         <footer class='contacts'>
 
         </footer>
-
+        <script type="text/javascript" src="functions.js"></script>
     </body>
 </html>
