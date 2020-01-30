@@ -33,7 +33,6 @@
     }
     .events figure{width: 23%;}
     .formReserv{grid-template-columns: 1fr 1fr;}
-
  }
 
 
@@ -116,6 +115,7 @@ input[type=submit]
     color: #fff;
     overflow: hidden;
     border: none;
+    width: fit-content;
     
 }
 button
@@ -126,6 +126,7 @@ button
     border: none;
     margin: auto;
     text-transform: uppercase;
+    
 }
 
 input[type=submit]:hover 
@@ -305,7 +306,6 @@ main{margin: 20px;}
     
 .back h3 {position: relative;}
 
-
 .back h3:after
 {
     content: "";
@@ -333,29 +333,17 @@ h2
 {
     text-align: center;   
 }
-figure{display: inline-block; }
+figure
+{
+    display: inline-block; 
+    background-color: white;
+}
 figure img{width: 100%;}
-figcaption{text-align: left;}
-    
-.slid
-{
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-}
-    
-.showing
-{
-    opacity: 1;
-    z-index: 2;
-}
-    
-.page:not(:first-of-type) 
-{ 
-    display: none; 
-}
-
+figcaption{text-align: left;}  
+.sliderBar{display:flex;}
+.sliderBar button{display:flex;}
+#Info figure img{width: 300px; height: 300px;}
+.rooms figure img{width: 100%;}
 .special ul{ 
     display: inline;
     margin: 10px;
@@ -398,7 +386,6 @@ figcaption{text-align: left;}
 }
 .events figcaption
 {
-    
     background-color: white;
     overflow:auto;
     padding:10px;
@@ -428,10 +415,65 @@ main input
     width: fit-content;
     margin-top:30px;
     background-color: white;
+    margin: auto;
 }
+.formReserv input[type=submit]
+{
+    grid-column: 1 / span 2;
+    margin: auto;
+}
+.formReserv h2,h6
+{
+    grid-column: 1 / span 2;
+    text-align: center;
+}
+.formReserv h2,h6{margin: 5px;}
+.formReserv select{background-color: white;}
 input:focus {
     outline: none;
    }
-   .btnPagin{margin:15px}
-
-
+.btnPagin{margin:15px}
+#Contacts ul
+{
+    list-style: none;
+    float: left;
+}
+#Contacts a{color:black;}
+#Contacts .occasion
+{
+    width: fit-content;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    
+}
+#Contacts{display: grid;}
+textarea
+{
+    border:none;
+    font-size: 15pt;
+    font-family: "Prata";
+}
+.centerButton{display: flex;}
+footer
+{
+    color:white;
+    background-color: #020f18;
+    text-align: center;
+    margin: 0;
+    padding:10px;
+}
+.rooms select
+{
+    background-color:white;
+    font-size: 15pt;
+    font-family: "Prata";
+    height: 50px;
+}
+.rooms label{font-weight: 600;}
+.rooms button
+{
+    font-size: 16pt;
+    display: inline-block;
+    margin-top: 10px;
+}

@@ -16,8 +16,8 @@
 
             <nav role='navigation'>
                 <ul>
-                    <li><a href="#Info" onclick="webUrlChange()">About us</a></li>
-                    <li><a href="#rooms" onclick="webUrlChange()">Rooms</a></li>
+                    <li><a href="#Info">About us</a></li>
+                    <li><a href="#rooms">Rooms</a></li>
                     <li><a href="#special">Special</a>
                         <ul>
                          <li><a href="#SPA">SPA</a></li>
@@ -27,7 +27,7 @@
 
                         </ul>
                     </li>
-                    <li><a href="">Contacts</a></li>
+                    <li><a href="#Contacts">Contacts</a></li>
                 </ul>
             </nav>
 
@@ -85,8 +85,23 @@
         </header>
         <main> 
             <div id='Info' class='information'>
-                <button class="controls" onclick="previousSlide()" id="previous">&lt;</button>
-                <button class="controls" onclick="nextSlide()" id="next">&gt;</button>
+                <div id='slider' class='slids'>
+                   
+                    <figure><img  src="img/0.jpg"/></figure>
+                    <figure><img src="img/1.jpg"/></figure>
+                    <figure><img  src="img/2.jpg"/></figure>
+                    <figure><img   src="img/3.jpg"/></figure>
+                    <figure><img src="img/6.jpg"/></figure>
+                    <figure><img src="img/6.jpg"/></figure>
+                    <figure><img   src="img/3.jpg"/></figure>
+                    <figure><img src="img/6.jpg"/></figure>
+                    <figure><img src="img/6.jpg"/></figure>
+                    <div  class='sliderBar'>
+                        <button class='centerButton' id='back'onclick="Slider(0)">&lt;</button>
+                        <button class='centerButton' id='forward'onclick="Slider(1)">&gt;</button>
+                    </div>
+                </div>
+               
                 <p><h2>About us</h2>
                     <div class="flipper">
                         <div class="front">
@@ -101,7 +116,6 @@
                             </div>
                         </div>
 
-                
                         <div class="flipper">
                             <div class="front">
                                     <h3>Le Jardin</h3>
@@ -115,9 +129,7 @@
                                     A unique experience starting from the amuse-bouche to Sébastien Quazzola's dessert creations, Pastry Chef of the Year 2019.</p>
                             </div>
                         </div>
-                    
 
-                    
                         <div class="flipper">
                             <div class="front">
                                     <h3>Relax & Revive</h3>
@@ -145,147 +157,46 @@
                             <p> The knowledge, expertise and attention to detail of the entire team makes for outstanding service.</p>
                         </div>
                     </div>
-
-
+                    <button class='centerButton'><a href="https://www.lerichemond.com/application/files/4815/5956/1769/Le_Richemond_-_brochure_hotel.pdf" target="_blank">Hotel's brochure</a></button>
             </div>
 
             <div id='rooms' class='rooms'>
-            <h2>Rooms</h2>
-            <h2>Pre-view</h2>
-            
-                        <figure>
-                            <img src="img/Superior_Room.jpg"/>
-                            <figcaption>
-                                <h3>Superior Room</h3>
-                                <ul>
-                                    <li>One bedroom, one bathroom</li>
-                                    <li>Reading area with desk</li>
-                                    <li>City or courtyard view</li>
-                                </ul>
-                            </figcaption>
-                        </figure>
-
-                        <figure>
-                            <img src="img/Deluxe_Room.jpg"/>
-                            <figcaption>
-                                <h3>Deluxe Room</h3>
-                                <ul>
-                                    <li>One bedroom, one bathroom</li>
-                                    <li>Reading area with desk</li>
-                                    <li>City or courtyard view</li>
-                                </ul>
-                            </figcaption>
-                        </figure>
-
-                            <figure>
-                                <img src="img/Executive_Room.jpg"/>
-                                <figcaption>
-                                    <h3>Executive Room</h3>
-                                    <ul>
-                                        <li>One bedroom, one bathroom</li>
-                                        <li>Connecting room available</li>
-                                        <li>City or courtyard view</li>
-                                    </ul>
-                                </figcaption>
-                            </figure>
-            
-                    <figure>
-                        <img src="img/Executive_Garden.jpg"/>
-                        <figcaption>
-                            <h3>Executive Garden View Room</h3>
-                            <ul>
-                                <li>One bedroom, one bathroom</li>
-                                <li>Connecting room available</li>
-                                <li>Partial Lake view, facing Brunswick </li>
-                            </ul>
-                        </figcaption>
-                    </figure>
-
-
-                    <figure>
-                        <img src="img/Premium_Lake.jpg"/>
-                        <figcaption>
-                            <h3>Premium Lake View Room</h3>
-                            <ul>
-                                <li>One bedroom, one bathroom</li>
-                                <li>Connecting room available</li>
-                                <li>Lake view and balcony</li>
-                            </ul>
-                        </figcaption>
-                    </figure>
-
-                    
-                    <figure>
-                        <img src="img/Junior_Suite.jpg"/>
-                        <figcaption>
-                            <h3>Junior Suite</h3>
-                            <ul>
-                                <li>One bedroom</li>
-                                <li>Complimentary Wi-Fi</li>
-                                <li>Elegant contemporary style</li>
-                            </ul>
-                        </figcaption>
-                    </figure>
-            
-                
-                    <figure>
-                        <img src="img/Lake_View.jpg"/>
-                        <figcaption>
-                            <h3>Lake View Junior Suite</h3>
-                            <ul>
-                                <li>One bedroom</li>
-                                <li>Complimentary Wi-Fi</li>
-                                <li>Lake view and balcony</li>
-                            </ul>
-                        </figcaption>
-                    </figure>
-
-                    <figure>
-                        <img src="img/Premium_Lake_View_Suite.jpg"/>
-                        <figcaption>
-                            <h3>Premium Lake View Suite</h3>
-                            <ul>
-                                <li>One bedroom</li>
-                                <li>Additional room may be added</li>
-                                <li>Lake view and balcony</li>
-                            </ul>
-                        </figcaption>
-                    </figure>
-
-                    <figure>
-                        <img src="img/Ambassador_Suite.jpg"/>
-                        <figcaption>
-                            <h3>Ambassador Suite</h3>
-                            <ul>
-                                <li>One bedroom, additional room may be added</li>
-                                <li>Complimentary return transfers</li>
-                                <li>Bottle of champagne</li>
-                            </ul>
-                        </figcaption>
-                    </figure>
-                    <figure >
-                        <img src="img/LRG_Presidential.jpg"/>
-                            <figcaption>
-                                <h3>Presidential Suite</h3>
-                                    <ul>
-                                        <li>One bedroom</li>
-                                        <li>Complimentary return transfers</li>
-                                        <li>Bottle of champagne</li>
-                                    </ul>
-                            </figcaption>
-                    </figure>
-                    <figure>
-                        <img src="img/Royal_Armleder.jpg"/>
-                        <figcaption>
-                            <h3>Royal Armleder Suite</h3>
-                                <ul>
-                                    <li>One bedroom</li>
-                                    <li>Complimentary return transfers</li>
-                                    <li>Bottle of champagne</li>
-                                </ul>
-                        </figcaption>
-                </figure>
-                
+                <h2>Rooms</h2>
+                <h2>Pre-view</h2>
+                <div>
+                    <button class='centerButton' onclick="createfig()">View All</button>
+                    <button class='centerButton'onclick="filter()">Filter</button>
+                </div>
+                <label>
+                    Bedroom with bathroom
+                    <select id='bedBath'>
+                        <option></option>
+                        <option>One bedroom, one bathroom</option>
+                        <option>One bedroom</option>
+                    </select>
+                </label>
+                <label>
+                    View
+                    <select id='View'>
+                        <option></option>
+                        <option>City or courtyard view</option>
+                        <option>Partial Lake view</option>
+                        <option>Lake view and balcony</option>
+                    </select>
+                </label>
+                <label>
+                    Benefits
+                    <select id='Benefits'>
+                        <option></option>
+                        <option>Complimentary Wi-Fi</option>
+                        <option>Additional room may be added</option>
+                        <option>Connecting room available</option>
+                        <option>Reading area with desk</option>
+                        <option>Complimentary return transfers</option>
+                    </select>
+                </label>
+                <div id='paginBar'></div>
+                <div id='roomsView'></div>
             </div>
 
             <div id='special' class= special>
@@ -322,7 +233,7 @@
                             <li>– 17/20 Gault & Millau Guide 2020</li>
                             <li>– Fitness studio open daily from 7am to 10pm.</li>
                         </ul>
-                        <button><a href="">LEARN MORE</a></button>
+                        <button><a href="#SPA">LEARN MORE</a></button>
                     </div>  
 
                 <div class='occasion'>
@@ -335,7 +246,7 @@
                     </ul>
                     <h3>Outside Catering</h3>
                     <p>Our Banqueting Chef Gilles Robert prepares tailored catering (cocktail pieces, menus, buffets) for your events to meet your every needs.</p>
-                    <button><a href="">LEARN MORE</a></button>
+                    <button><a href="#events">LEARN MORE</a></button>
                 </div>  
             </div>
 
@@ -423,7 +334,7 @@
                     <label>
                         Resarvation time
                         <input type='time'>
-                    <label>
+                    </label>
                    
                     <p><label>
                     <input type="checkbox" >
@@ -435,14 +346,118 @@
 
             </div>
 
-            <div id='SPA' class='events'></div>
+            <div id='SPA' class='events'>
+                <h2>Le Spa by Sisley</h2>
+                <form id='reserv' class='formReserv'>
+                    <h2>Pre-booking form</h2>
+                    <h6>Please fill in the form below so our therapists can contact you and confirm your appointment.</h6>
+                    <h6>Please note that this form is not a booking confirmation.</h6>
+                    <input type='text' placeholder='Title'>
+                    <input type='tel' placeholder='Phone number*'>
+                    <input type='text' placeholder='First name*'>
+                    <input type='email' placeholder='Email'>
+                    <input type='text' placeholder='Last name*'> 
+                    <input type="text" id="addInfo" placeholder='Spetial requasts'>
+                    <label>
+                        Resarvation date
+                        <input type='date'>
+                    </label>
+                    <label>
+                        Resarvation date
+                        <input type='date'>
+                    </label>
+                    </label>
+                    <label>
+                        Category of treatments*
+                        <select>
+                            <option>Phyto-aromatic facials</option>
+                            <option>Phyto-aromatic body treatments</option>
+                            <option>Massages</option>
+                            <option>Experiences</option>
+                            <option>Aesthetic services</option>
+                            <option>Packages Sisley</option>
+                            <option>Highlights</option>
+                        </select>
+                    </label>
+                    <label>
+                        Type of treatments*
+                        <select>
+                            <option>Phyto-aromatic facials</option>
+                            <option>Phyto-aromatic body treatments</option>
+                            <option>Massages</option>
+                            <option>Experiences</option>
+                            <option>Aesthetic services</option>
+                            <option>Packages Sisley</option>
+                            <option>Highlights</option>
+                        </select>
+                    </label>
+                    <p><label>
+                    <input type="checkbox" >
+                        I accept to be contacted as per my above request. 
+                         My information can be used for sale purposes.
+                    </label></p>
+                    <input type="submit" value="Search">
+                </form>
+            </div>
 
             <div id='Resturan' class='events'></div>
+
+            <div id='Contacts' class='events'>
+                <div class='occasion'>
+                    <h1>Le Richemond</h1>
+                    <ul>
+                        <caption><h4>Address</h4></caption>
+                        <li>Le Richemond</li>
+                        <li>Rue Adhémar-Fabri, 8-10</li>
+                        <li>1201 Genève I Suisse</li>
+                    </ul>
+                    <ul>
+                        <caption><h4>Phone</h4></caption> 
+                        <li><a href="tel:+41 22 715 7000">+41 22 715 7000</a></li>
+                    </ul>
+                    <ul>
+                        <caption><h4>Email</h4></caption> 
+                        <li><a href="mailto:info@lerichemond.com">info@lerichemond.com</a></li>
+                    </ul>
+                </div>
+                <div class='occasion'>
+                    <h2>Location</h2>   
+                    <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+                        <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
+                        <a href="https://1map.com/ru/map-embed?embed_id=151711">1 Map</a></div>
+                </div>
+                <form id='reserv' class='formReserv'>
+                    <h2>Get in touch</h2>
+                    <h6>Don't hesitate to contact us for any inquiry </h6>
+                    <input type='text' placeholder='First name*'>
+                    <input type='tel' placeholder='Phone number*'>
+                    <input type='text' placeholder='Last name*'> 
+                    <input type='email' placeholder='Email'>
+                    <label>Nature of enqiary
+                        <select>
+                            <option>Booking</option>
+                            <option>Other</option>
+                        </select>
+                    </label>
+                    <textarea placeholder='Massege'></textarea placeholder='Email'>
+                    <p><label>
+                    <input type="checkbox" >
+                    Accept Conditions of Contact
+                    </label></p>
+                    <input type="submit" value="Search">
+                </form>
+
+            </div>
  
         </main>
 
-        <footer class='contacts'>
-
+        <footer class='contInfo'>
+            <p>Le Richemond</p>
+            <p>Rue Adhémar-Fabri, 8-10</p>
+            <p>1201 Genève I Suisse</p>
+            
+            <p><a href="mailto:info@lerichemond.com">info@lerichemond.com></p>
+            <p><a href="tel:+41 22 715 7000">+41 22 715 7000</a></p>
         </footer>
         <script type="text/javascript" src="functions.js"></script>
     </body>

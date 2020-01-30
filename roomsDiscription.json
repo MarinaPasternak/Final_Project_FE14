@@ -1,0 +1,14 @@
+[
+    {"label":"Superior Room","bedroomNbath":"One bedroom, one bathroom","bonus":"Reading area with desk","view":"City or courtyard view","imgSRC":"img/Superior_Room.jpg"},
+    {"label":"Deluxe Room","bedroomNbath":"One bedroom, one bathroom","bonus":"Reading area with desk","view":"City or courtyard view","imgSRC":"img/Deluxe_Room.jpg"},
+    {"label":"Executive Room","bedroomNbath":"One bedroom, one bathroom","bonus":"Connecting room available","view":"City or courtyard view","imgSRC":"img/Executive_Room.jpg"},
+    {"label":"Executive Garden View Room","bedroomNbath":"One bedroom, one bathroom","bonus":"Connecting room available","view":"Partial Lake view, facing Brunswick ","imgSRC":"img/Executive_Garden.jpg"},
+    {"label":"Premium Lake View Room","bedroomNbath":"One bedroom, one bathroom","bonus":"Connecting room available","view":"Partial Lake view, facing Brunswick ","imgSRC":"img/Premium_Lake.jpg"},
+    {"label":"Premium Lake View Room","bedroomNbath":"One bedroom, one bathroom","bonus":"Connecting room available","view":"Lake view and balcony","imgSRC":"img/Premium_Lake.jpg"},
+    {"label":"Junior Suite","bedroomNbath":"One bedroom","bonus":"Complimentary Wi-Fi","view":"Elegant contemporary style","imgSRC":"img/Junior_Suite.jpg"},
+    {"label":"Ambassador Suite","bedroomNbath":"One bedroom, additional room may be added","bonus":"Complimentary return transfers","view":"Bottle of champagne","imgSRC":"img/Premium_Lake_View_Suite.jpg"},
+    {"label":"Lake View Junior Suite","bedroomNbath":"One bedroom","bonus":"Complimentary Wi-Fi","view":"Lake view and balcony","imgSRC":"img/Lake_View.jpg"},
+    {"label":"Premium Lake View Suite","bedroomNbath":"One bedroom","bonus":"Additional room may be added","view":"Lake view and balcony","imgSRC":"img/Premium_Lake_View_Suite.jpg"},
+    {"label":"Presidential Suite","bedroomNbath":"One bedroom","bonus":"Complimentary return transfers","view":"Bottle of champagne","imgSRC":"img/LRG_Presidential.jpg"},
+    {"label":"Royal Armleder Suite","bedroomNbath":"One bedroom","bonus":"Complimentary return transfers","view":"Bottle of champagne","imgSRC":"img/Royal_Armleder.jpg"}
+]
