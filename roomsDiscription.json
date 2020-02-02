@@ -1,4 +1,4 @@
-[
+
     {"label":"Superior Room","bedroomNbath":"One bedroom, one bathroom","bonus":"Reading area with desk","view":"City or courtyard view","imgSRC":"img/Superior_Room.jpg"},
     {"label":"Deluxe Room","bedroomNbath":"One bedroom, one bathroom","bonus":"Reading area with desk","view":"City or courtyard view","imgSRC":"img/Deluxe_Room.jpg"},
     {"label":"Executive Room","bedroomNbath":"One bedroom, one bathroom","bonus":"Connecting room available","view":"City or courtyard view","imgSRC":"img/Executive_Room.jpg"},
@@ -11,4 +11,3 @@
     {"label":"Premium Lake View Suite","bedroomNbath":"One bedroom","bonus":"Additional room may be added","view":"Lake view and balcony","imgSRC":"img/Premium_Lake_View_Suite.jpg"},
     {"label":"Presidential Suite","bedroomNbath":"One bedroom","bonus":"Complimentary return transfers","view":"Bottle of champagne","imgSRC":"img/LRG_Presidential.jpg"},
     {"label":"Royal Armleder Suite","bedroomNbath":"One bedroom","bonus":"Complimentary return transfers","view":"Bottle of champagne","imgSRC":"img/Royal_Armleder.jpg"}
-]

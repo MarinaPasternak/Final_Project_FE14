@@ -78,12 +78,14 @@
                         </select>
                     </label>
                     <input type="submit" value="Search">
-                    <h4><a href="">ADVANCED SEARCH</a></h4>
+                    <h4><a href="#rooms" onclick="goToForm(book)" >ADVANCED SEARCH</a></h4>
                 </form>
             </div> 
          
         </header>
+
         <main> 
+            <div id='breadcrumbs'></div>
             <div id='Info' class='information'>
                 <div id='slider' class='slids'>
                    
@@ -92,9 +94,9 @@
                     <figure><img  src="img/2.jpg"/></figure>
                     <figure><img   src="img/3.jpg"/></figure>
                     <figure><img src="img/6.jpg"/></figure>
-                    <figure><img src="img/6.jpg"/></figure>
-                    <figure><img   src="img/3.jpg"/></figure>
-                    <figure><img src="img/6.jpg"/></figure>
+                    <figure><img src="img/b1.jpg"/></figure>
+                    <figure><img   src="img/5.jpg"/></figure>
+                    <figure><img src="img/1.jpg"/></figure>
                     <figure><img src="img/6.jpg"/></figure>
                     <div  class='sliderBar'>
                         <button class='centerButton' id='back'onclick="Slider(0)">&lt;</button>
@@ -102,7 +104,7 @@
                     </div>
                 </div>
                
-                <p><h2>About us</h2>
+                <p><h1>About us</h1>
                     <div class="flipper">
                         <div class="front">
                                     <h3>Discover A Lakeside Escape</h3>
@@ -161,7 +163,7 @@
             </div>
 
             <div id='rooms' class='rooms'>
-                <h2>Rooms</h2>
+                <h1>Rooms</h1>
                 <h2>Pre-view</h2>
                 <div>
                     <button class='centerButton' onclick="createfig()">View All</button>
@@ -197,9 +199,63 @@
                 </label>
                 <div id='paginBar'></div>
                 <div id='roomsView'></div>
+                <div id='AvaibleRooms'></div>
+                <div>
+                <form id='book' class='formReserv'>
+                    <input required type='tel' placeholder='Phone number*'>
+                    <input required type='text' placeholder='First name*'>
+                    <input required type='email' placeholder='Email'>
+                    <input required type='text' placeholder='Last name*'> 
+                    <input required type="text" id="addInfo" placeholder='Type of room'>
+                    <label>
+                        Arrival <input required type="date">
+                </label>
+
+                <label>
+                    Departure <input required type="date">
+                </label>
+
+                <label>
+                    Adults
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </label>
+                <label>
+                    Children
+                    <select>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </label>
+                <label>
+                    Rooms
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </label>
+                   
+                    <p><label>
+                    <input required type="checkbox" >
+                        I accept to be contacted as per my above request. 
+                         My information can be used for sale purposes.
+                    </label></p>
+                    <input type="submit" value="Search">
+                </form>
+                </div>
             </div>
 
             <div id='special' class= special>
+                <h1>Additional services</h1>
                     <div class='occasion'>
                         <h2>Resturant</h2>
                        <ul>
@@ -251,10 +307,9 @@
             </div>
 
             <div id='events' class='events'>
-
-                <h2>Meetings, Events
+                <h1>Meetings, Events
                     & Outside Catering Service
-                    at Le Richemond</h2>
+                </h1>
 
                 <figure>
                     <img src="img/b1.jpg"/>
@@ -264,7 +319,7 @@
                         <p>A contemporary space ideally suited to product launches, gala dinners and larger conferences, the Paul Klee Salon measures 210 m2 (2,325 ft2) and can host a seated dinner for up to 200 guests, or a cocktail reception for 280 guests.</p>
                         <p>The Paul Klee Salon is accessed via the Galerie Rachmaninoff, a dramatic walkway located beneath a glass ceiling.</p>
                     </figcaption>
-                    <button onclick="goToForm()">Pre-reservation request</button>
+                    <button onclick="goToForm('reserv')">Pre-reservation request</button>
                 </figure>
 
                 <figure>
@@ -274,7 +329,7 @@
                         <h4>Coppet and Chambésy Salon</h4>
                         <p>Separated by a sliding soundproof partition, the two salons combine to form an elegant venue, hosting up to 100 guests for theatre seating. Filled with natural daylight, the salons measure 123 m2 (1,324 ft2) all together and are ideal for pre-event gatherings or boardroom meetings; they are located opposite the grand double doors of the ballroom for convenient access.</p>
                     </figcaption>
-                    <button onclick="goToForm()">Pre-reservation request</button>
+                    <button onclick="goToForm('reserv')">Pre-reservation request</button>
                 </figure>
 
                 <figure>
@@ -284,7 +339,7 @@
                         <h4>Ballroom</h4>
                         <p>A refined space measuring 137 m2 (1,475 ft2), decorated with trompe-l’oeil paintings, mirrored walls, magnificent parquet flooring and Murano glass chandeliers, the ballroom can host seated dinners for up to 80 guests, and cocktail for up to 120 guests.</p>
                     </figcaption>
-                    <button onclick="goToForm()">Pre-reservation request</button>
+                    <button onclick="goToForm('reserv')">Pre-reservation request</button>
                 </figure>
 
                 <figure>
@@ -294,7 +349,7 @@
                         <h4>Royal Armleder Suite</h4>
                         <p>Located on the seventh floor, the sumptuous Royal Armleder Suite, measuring 150 m2 (1,615 ft2) offers a spacious living room with fireplace, a dining room for private entertaining and terraces with 360-degree views of Lake Geneva, the Old Town and snow-capped mountains. Light-filled rooms offer peerless comfort and contemporary décor complemented by artworks, antiques and modern furniture. Two beautifully furnished terraces enable guests to make the most of the view. This Royal Suite is perfect for private lunch or dinner up to 30 guests and cocktail up to 40 guests.</p>
                     </figcaption>
-                    <button onclick="goToForm()">Pre-reservation request</button>
+                    <button onclick="goToForm('reserv')">Pre-reservation request</button>
                 </figure>
 
                 <div class='occasion'>
@@ -303,7 +358,7 @@
                        <p>Le Richemond provides a stylish venue to tie the knot or celebrate your marriage, where unsurpassed service and attention to detail are our specialities.</p>
                        <p>Our profesionnal and enthusiastic wedding planner will be by your side to plan every detail to make your event unforgettable: wedding announcement, floral decoration, entertainment...</p>
                        <p>Our team will be delighted to meet you and discuss your thoughts.</p>
-                       <button onclick="goToForm()">Make a wish</button>
+                       <button onclick="goToForm('reserv')">Make a wish</button>
                 </div>
 
                 <div class='occasion'>
@@ -315,29 +370,64 @@
                 </div>
                 
                 <div id="tablePrice">
-                    <button onclick="createTable()">
+                    
+                    <button id='createTable' onclick="createTable()">
                        Price list
                     </button>
+                    <div>
+                    <label>
+                        Sort salon by alphabet
+                        <select id='typeForString'>
+                            <option></option>
+                            <option>A-Z</option>
+                            <option>Z-A</option>
+                        </select>
+                    </label>
+                    <label>
+                        Choose category to sort
+                        <select id='categorySort'>
+                            <option></option>
+                            <option>banqueting</option>
+                            <option>boardroom</option>
+                            <option>cabaret</option>
+                            <option>classroom</option>
+                            <option>reception</option>
+                            <option>m2</option>
+                        </select>
+                    </label>
+                    <label>
+                        Sort type
+                        <select id='typeForNums'>
+                            <option></option>
+                            <option>1-9</option>
+                            <option>9-1</option>
+                        </select>
+                    </label>
+                    </div>
+                    <button onclick="sortTable()">
+                        Sort
+                     </button>
+                     <div id='tableDiv'></div>
                 </div>
 
                 <form id='reserv' class='formReserv'>
-                    <input type='text' placeholder='Title'>
-                    <input type='tel' placeholder='Phone number*'>
-                    <input type='text' placeholder='First name*'>
-                    <input type='email' placeholder='Email'>
-                    <input type='text' placeholder='Last name*'> 
-                    <input type="text" id="addInfo" placeholder='Meeting room'>
+                    <input required type='text' placeholder='Title'>
+                    <input required type='tel' placeholder='Phone number*'>
+                    <input required type='text' placeholder='First name*'>
+                    <input required type='email' placeholder='Email'>
+                    <input required type='text' placeholder='Last name*'> 
+                    <input required type="text" id="addInfo" placeholder='Meeting room'>
                     <label>
                         Resarvation date
-                        <input type='date'>
+                        <input required type='date'>
                     </label>
                     <label>
                         Resarvation time
-                        <input type='time'>
+                        <input required type='time'>
                     </label>
                    
                     <p><label>
-                    <input type="checkbox" >
+                    <input required type="checkbox" >
                         I accept to be contacted as per my above request. 
                          My information can be used for sale purposes.
                     </label></p>
@@ -347,29 +437,35 @@
             </div>
 
             <div id='SPA' class='events'>
-                <h2>Le Spa by Sisley</h2>
-                <form id='reserv' class='formReserv'>
+                <h1>Le Spa by Sisley</h1>
+                <div id='fillContent'></div>
+               
+            </div>
+
+            <div id='CategorySPA' class='events'>
+                <div id='Category'></div>
+                <form class='formReserv'>
                     <h2>Pre-booking form</h2>
                     <h6>Please fill in the form below so our therapists can contact you and confirm your appointment.</h6>
                     <h6>Please note that this form is not a booking confirmation.</h6>
-                    <input type='text' placeholder='Title'>
-                    <input type='tel' placeholder='Phone number*'>
-                    <input type='text' placeholder='First name*'>
-                    <input type='email' placeholder='Email'>
-                    <input type='text' placeholder='Last name*'> 
-                    <input type="text" id="addInfo" placeholder='Spetial requasts'>
+                    <input type='text' required placeholder='Title'>
+                    <input type='tel'required placeholder='Phone number*'>
+                    <input type='text'required placeholder='First name*'>
+                    <input type='email'required placeholder='Email'>
+                    <input type='text'required placeholder='Last name*'> 
+                    <input type="text" required id="addInfo" placeholder='Spetial requasts'>
                     <label>
                         Resarvation date
-                        <input type='date'>
+                        <input required type='date'>
                     </label>
                     <label>
                         Resarvation date
-                        <input type='date'>
+                        <input required type='date'>
                     </label>
                     </label>
                     <label>
                         Category of treatments*
-                        <select>
+                        <select required id='Ctreatments'>
                             <option>Phyto-aromatic facials</option>
                             <option>Phyto-aromatic body treatments</option>
                             <option>Massages</option>
@@ -381,7 +477,7 @@
                     </label>
                     <label>
                         Type of treatments*
-                        <select>
+                        <select required id='Ttreatments'>
                             <option>Phyto-aromatic facials</option>
                             <option>Phyto-aromatic body treatments</option>
                             <option>Massages</option>
@@ -392,7 +488,7 @@
                         </select>
                     </label>
                     <p><label>
-                    <input type="checkbox" >
+                    <input required type="checkbox" >
                         I accept to be contacted as per my above request. 
                          My information can be used for sale purposes.
                     </label></p>
@@ -401,10 +497,12 @@
             </div>
 
             <div id='Resturan' class='events'></div>
+            <div id='bookingRoom'></div>
 
             <div id='Contacts' class='events'>
+                <h1>Contact Information</h1>
                 <div class='occasion'>
-                    <h1>Le Richemond</h1>
+                    <h2>Le Richemond</h2>
                     <ul>
                         <caption><h4>Address</h4></caption>
                         <li>Le Richemond</li>
@@ -426,22 +524,22 @@
                         <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
                         <a href="https://1map.com/ru/map-embed?embed_id=151711">1 Map</a></div>
                 </div>
-                <form id='reserv' class='formReserv'>
+                <form class='formReserv'>
                     <h2>Get in touch</h2>
                     <h6>Don't hesitate to contact us for any inquiry </h6>
-                    <input type='text' placeholder='First name*'>
-                    <input type='tel' placeholder='Phone number*'>
-                    <input type='text' placeholder='Last name*'> 
-                    <input type='email' placeholder='Email'>
+                    <input type='text' required placeholder='First name*'>
+                    <input type='tel' required placeholder='Phone number*'>
+                    <input type='text' required placeholder='Last name*'> 
+                    <input type='email' required placeholder='Email'>
                     <label>Nature of enqiary
                         <select>
                             <option>Booking</option>
                             <option>Other</option>
                         </select>
                     </label>
-                    <textarea placeholder='Massege'></textarea placeholder='Email'>
+                    <textarea placeholder='Massege'></textarea>
                     <p><label>
-                    <input type="checkbox" >
+                    <input required type="checkbox" >
                     Accept Conditions of Contact
                     </label></p>
                     <input type="submit" value="Search">
@@ -459,6 +557,7 @@
             <p><a href="mailto:info@lerichemond.com">info@lerichemond.com></p>
             <p><a href="tel:+41 22 715 7000">+41 22 715 7000</a></p>
         </footer>
+        <script type="text/javascript" src="roomsDiscription.json"></script>
         <script type="text/javascript" src="functions.js"></script>
     </body>
 </html>
