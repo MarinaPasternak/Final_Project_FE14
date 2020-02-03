@@ -23,65 +23,11 @@
                          <li><a href="#SPA">SPA</a></li>
                             <li><a href="">Resturan</a></li>
                             <li><a href="#events">MEETING & EVENTS</a></li>
-                            <li><a href="">Special offers</a></li>
-
                         </ul>
                     </li>
                     <li><a href="#Contacts">Contacts</a></li>
                 </ul>
             </nav>
-
-            <div class='intro'>
-                <span>
-                    <h1>Legendary hotel on the banks of Lake Geneva</h1>
-                    <p>Le Richemond offers 109 rooms and suites, 
-                        each presenting luxurious and unrivalled comfort.
-                    All en suite bathrooms feature exquisite 
-                        bright marble bathrooms.</p>
-               </span>
-
-                <form>
-                    <label>
-                            Arrival <input type="date" атрибуты>
-                    </label>
-
-                    <label>
-                        Departure <input type="date" атрибуты>
-                    </label>
-
-                    <label>
-                        Adults
-                        <select>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                        </select>
-                    </label>
-                    <label>
-                        Children
-                        <select>
-                            <option>0</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                        </select>
-                    </label>
-                    <label>
-                        Rooms
-                        <select>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                        </select>
-                    </label>
-                    <input type="submit" value="Search">
-                    <h4><a href="#rooms" onclick="goToForm(book)" >ADVANCED SEARCH</a></h4>
-                </form>
-            </div> 
-         
         </header>
 
         <main> 
@@ -202,22 +148,13 @@
                 <div id='AvaibleRooms'></div>
                 <div>
                 <form id='book' class='formReserv'>
-                    <input required type='tel' placeholder='Phone number*'>
-                    <input required type='text' placeholder='First name*'>
-                    <input required type='email' placeholder='Email'>
-                    <input required type='text' placeholder='Last name*'> 
-                    <input required type="text" id="addInfo" placeholder='Type of room'>
+                    <input required type='tel'  id="phoneNum" placeholder='Phone number*'>
+                    <input required type='text'id="Fname" placeholder='First name*'>
+                    <input required type='email' id='email' placeholder='Email'>
+                    <input required type='text' id="Lname" placeholder='Last name*'> 
                     <label>
-                        Arrival <input required type="date">
-                </label>
-
-                <label>
-                    Departure <input required type="date">
-                </label>
-
-                <label>
                     Adults
-                    <select>
+                    <select id='Adults'>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -226,7 +163,7 @@
                 </label>
                 <label>
                     Children
-                    <select>
+                    <select id='Children'>
                         <option>0</option>
                         <option>1</option>
                         <option>2</option>
@@ -234,21 +171,25 @@
                         <option>4</option>
                     </select>
                 </label>
-                <label>
-                    Rooms
-                    <select>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                    </select>
+                 <label>
+                        Arrival <input id="Arrival"  required type="date">
                 </label>
-                   
-                    <p><label>
+               
+                <label>
+                        Style of room
+                        <select id='StyleRoom'>  
+                        </select>
+                    </label>
+                   <label>
+                    Departure <input id="Departure" required type="date">
+                </label>
+
+                <p><label>
                     <input required type="checkbox" >
                         I accept to be contacted as per my above request. 
                          My information can be used for sale purposes.
                     </label></p>
+                   
                     <input type="submit" value="Search">
                 </form>
                 </div>
@@ -557,7 +498,6 @@
             <p><a href="mailto:info@lerichemond.com">info@lerichemond.com></p>
             <p><a href="tel:+41 22 715 7000">+41 22 715 7000</a></p>
         </footer>
-        <script type="text/javascript" src="roomsDiscription.json"></script>
         <script type="text/javascript" src="functions.js"></script>
     </body>
 </html>

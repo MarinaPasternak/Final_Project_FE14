@@ -13,27 +13,17 @@
     }
 }
 @media screen and (max-width: 768px) { 
-    form{display: grid;}
+    
     h1{font-size: 25px;}
-    span p{display: none;}
-    .intro{
-            bottom: -60%;
-            position: relative;
-        }
-    video{display: none;}
-    header{background-color: #071927;}
+    .occasion{width: 100%;}
     .events figure{width: 100%; margin: auto;}
+    .formReserv{display: flex;}
 }
 @media screen and (min-width: 834px)
  { 
-    .intro
-    {
-        bottom: 0;
-        position: absolute;
-    }
     .events figure{width: 23%;}
-    .formReserv{grid-template-columns: 1fr 1fr;}
-    .occasion{width: 28%;}
+    
+   
 
  }
 @font-face 
@@ -61,50 +51,6 @@ header
     margin: 0;
 }
 
-.intro
-{
-    margin: auto;
-    left: 0;
-    right: 0;
-    text-align: center;
-    
-}
-
-.intro p
-{  
-    color: rgb(114, 114, 114);  
-    line-height: 1.6em;
-    font-size: 10pt;
-}
-span
-{
-    margin: 0 25%;
-    
-}
-
-span h1
-{  
-    font-family: "Prata";
-    color: white; 
-    font-size: 40px;
-    line-height: 1.6em;
-    
-  
-}
-
-.intro form
-{
-    margin: auto;
-    margin-bottom:30px ;
-    background-color: rgb(247, 247, 247);
-    opacity: 0.9;
-    color: black;
-    width: fit-content;
-    justify-content: stretch;
-    text-align: center;
-}
-    
-
 input[type=submit]
 {
     padding: 10px 20px;
@@ -131,26 +77,6 @@ button
 input[type=submit]:hover 
 { 
     background-color:  rgba(240, 36, 36, 0.849);
-}
-
-header input,select
-{
-    border: none;
-    font-weight: 400;
-    font-size: 20px;
-    padding: 0 5px;
-    margin: 10px;
-    background-color: floralwhite;
-    line-height: 1.35em;
-}
-
-.intro label
-{
-    margin: 10px;
-    font-size: 10pt;
-    color: rgb(114, 114, 114);
-    text-transform: uppercase;
-    text-align: center;
 }
 
 a
@@ -361,6 +287,7 @@ figcaption{text-align: left;}
     margin: auto;
     width: fit-content;
     margin-top:20px ;
+    text-align: center;
 }
 .occasion
 {
@@ -434,7 +361,7 @@ main input
     font-size:15pt;
     margin:10px
 }
-
+#createTable{display: block;}
 .formReserv
 {
     display: grid;
@@ -455,7 +382,11 @@ main input
     grid-column: 1 / span 2;
     text-align: center;
 }
-
+.formReserv #Arrival,#Departure
+{
+    grid-column: 1 / span 2;
+    text-align: center;
+}
 .formReserv h2,h6{margin: 5px;}
 .formReserv select{background-color: white;}
 
@@ -508,6 +439,8 @@ main select
     font-size: 15pt;
     font-family: "Prata";
     height: 50px;
+    border: none;
+    margin-top:10px ;
 }
 .rooms label
 {
@@ -520,6 +453,7 @@ main select
     display: inline-block;
     margin-top: 10px;
 }
+.rooms th {font-size: 16pt;}
 #breadcrumbs
 {
     width: 100%;

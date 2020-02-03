@@ -1,11 +1,23 @@
 var lastNum=0;
+var currDate=new Date();
+var month=currDate.getMonth()+1;
+var day=currDate.getDate();
+if(month<=9)
+{
+	month="0"+month;
+}
+if(day<=9)
+{
+	day="0"+day;
+}
+var dateCompare=(currDate.getFullYear()+"-"+month+"-"+day).toString();
+console.log(dateCompare);
 var roomsArray = 
 			[ 
 	{"label":"Superior Room","bedroomNbath":"One bedroom, one bathroom","bonus":"Reading area with desk","view":"City or courtyard view","imgSRC":"img/Superior_Room.jpg","price":495,'countRooms':5},
     {"label":"Deluxe Room","bedroomNbath":"One bedroom, one bathroom","bonus":"Reading area with desk","view":"City or courtyard view","imgSRC":"img/Deluxe_Room.jpg","price":545,'countRooms':5},
     {"label":"Executive Room","bedroomNbath":"One bedroom, one bathroom","bonus":"Connecting room available","view":"City or courtyard view","imgSRC":"img/Executive_Room.jpg","price":605,'countRooms':6},
     {"label":"Executive Garden View Room","bedroomNbath":"One bedroom, one bathroom","bonus":"Connecting room available","view":"Partial Lake view, facing Brunswick ","imgSRC":"img/Executive_Garden.jpg","price":705,'countRooms':5},
-    {"label":"Premium Lake View Room","bedroomNbath":"One bedroom, one bathroom","bonus":"Connecting room available","view":"Partial Lake view, facing Brunswick ","imgSRC":"img/Premium_Lake.jpg","price": 795,'countRooms':8},
     {"label":"Premium Lake View Room","bedroomNbath":"One bedroom, one bathroom","bonus":"Connecting room available","view":"Lake view and balcony","imgSRC":"img/Premium_Lake.jpg","price":945,'countRooms':5},
     {"label":"Junior Suite","bedroomNbath":"One bedroom","bonus":"Complimentary Wi-Fi","view":"Elegant contemporary style","imgSRC":"img/Junior_Suite.jpg","price":1045,'countRooms':7},
     {"label":"Ambassador Suite","bedroomNbath":"One bedroom","bonus":"Complimentary return transfers","view":"Bottle of champagne","imgSRC":"img/Premium_Lake_View_Suite.jpg","price":1545,'countRooms':7},
@@ -14,6 +26,7 @@ var roomsArray =
     {"label":"Presidential Suite","bedroomNbath":"One bedroom","bonus":"Complimentary return transfers","view":"Bottle of champagne","imgSRC":"img/LRG_Presidential.jpg","price":2545,'countRooms':5},
     {"label":"Royal Armleder Suite","bedroomNbath":"One bedroom","bonus":"Complimentary return transfers","view":"Bottle of champagne","imgSRC":"img/Royal_Armleder.jpg","price":11215,'countRooms':1}
 			];
+var resrvRoom=[];
 var MyJson = 
 			[ 
 				{ "name":"Balroom","banqueting": 80,"boardroom":30,"cabaret":42,"classroom":50,"dinnerDancing":60,"reception":120,"theatre":90,"ushape":90,"ft2":"1,475","m2":137}, 
@@ -102,7 +115,6 @@ function breadcrumbs()
 	for(let i=0;i<breadcrumbsLinks.length;i++)
 	{
 		breadcrumbsHTML+='<a href='+breadcrumbsLinks[i]+'>'+'/'+document.querySelector(breadcrumbsLinks[i]+" h1").innerHTML+'/'+'</a>';
-	console.log(document.querySelector(breadcrumbsLinks[i]+" h1"));
 }
 	breadcrumbsDIV.innerHTML=breadcrumbsHTML;
 	
@@ -151,7 +163,7 @@ function paginationBar()
 		let div=document.getElementById("paginBar");
 		let pagnButton =null;
 		div.className='pagination_bar';
-		let count =11;
+		let count =roomsArray.length;
 		let numButtons = Math.ceil(count/itemsPerPage);
 		let addTxT = ''
 		for(let i =1;i<=numButtons;i++)
@@ -192,7 +204,6 @@ function webUrlChange()
 			breadcrumbsLinks=breadcrumbsLinks.slice(0,breadcrumbsLinks.indexOf(curState)+1)
 		}
 		breadcrumbs();
-		console.log(breadcrumbsLinks);
 		
 	}
 
@@ -229,7 +240,6 @@ function createCategory(x)
 		document.getElementById('Ctreatments').innerHTML="<option>"+SPAnCategory[x].spaLabel+"</option>"
 	}
 	
-	
 
 function createTable() { 
 		let txt=''
@@ -240,28 +250,149 @@ function createTable() {
 			+"<th>U-SHAPE</th>"+"<th>FT2</th>"+"<th>m2</th>"+"</tr>";
 			for (x in MyJson) {
 
-				txt += "<tr>"+"<td>" + MyJson[x].label + "</td>"+"<td>"+MyJson[x].banqueting+"</td>"+"<td>"+MyJson[x].boardroom+"</td>"+"<td>"+MyJson[x].cabaret+"</td>"
+				txt += "<tr>"+"<td>" + MyJson[x].name + "</td>"+"<td>"+MyJson[x].banqueting+"</td>"+"<td>"+MyJson[x].boardroom+"</td>"+"<td>"+MyJson[x].cabaret+"</td>"
 				+"<td>"+MyJson[x].classroom+"</td>"+"<td>"+MyJson[x].dinnerDancing+"</td>"+"<td>"+MyJson[x].reception+"</td>"+"<td>"+MyJson[x].theatre+"</td>"
 				+"<td>"+MyJson[x].ushape+"</td>"+"<td>"+MyJson[x].ft2+"</td>"+"<td>"+MyJson[x].m2+"</td>"+"</tr>";
 			}
 			txt += "</table>"        
 			tableDiv.innerHTML = txt;
-			document.getElementById("createTable").style.display='none'
+			document.getElementById("createTable").style.display='none';
+}
+
+function validateDates(arrival,departure)
+{
+	
+	let Arrival=Date(arrival);
+	console.log(currDate);
+	if(Arrival<dateCompare)
+	{
+		alert('Cuurrent date less than arrival');
+		return false;	
 	}
+	if(arrival>departure)
+	{
+		alert('Arrival date more than Departure');
+		return false;	
+		
+	}
+	else
+	{
+		return true;
+	}
+	
+}
+
 function TableAvaibleRooms() { 
 		let txt=''
 		let tableDiv = document.getElementById("AvaibleRooms");
 			txt = txt +"<table>"
-			txt +="<tr>"+"<th>Style</th>"+"<th>Price</th>"+"<th>All rooms</th>"+"<th>Avaible</th></tr>";
+			txt +="<tr>"+"<th>Style</th>"+"<th>Price</th>"+"<th>Avaible</th></tr>";
 			for (x in roomsArray) {
 				
-				txt += "<tr>"+"<td>" + roomsArray[x].label + "</td>"+"<td>"+roomsArray[x].price+"</td>"+"<td>"+roomsArray[x].countRooms+"</td>"+"<td>"+roomsArray[x].countRooms+"</td>"+"</tr>";
+				txt += "<tr>"+"<td>" + roomsArray[x].label + "</td>"+"<td>"+roomsArray[x].price+"</td>"+"<td>"+roomsArray[x].countRooms+"</td></tr>";
 			}
 			txt += "</table>"        
 			tableDiv.innerHTML = txt;
-			document.getElementById("createTable").style.display='none'
+}
+
+function fillclientArray()
+{
+	
+	for(let i=0;i<localStorage.length; i++)
+	{
+		if (!localStorage.hasOwnProperty(i)) {
+			continue; 
+		  }
+		  
+		  resrvRoom.push(JSON.parse(localStorage.getItem(i)));
 	}
+	for(x in  resrvRoom)
+	{
+		roomsArray=roomsArray.map(function(element) {
+			
+			if(element.label==resrvRoom[x].StyleRoom)
+			{
+				
+				if(element.countRooms!=0)
+				{
+					element.countRooms=element.countRooms-1;
+					if(resrvRoom[x].Departure==dateCompare)
+					{
+						element.countRooms=element.countRooms+1;
+					}
+					return element;
+				}
+				else
+				{
+					return element;
+				}
+			}
+			else
+			{
+				return element;
+			}
+		  });
+	}
+	console.log( resrvRoom);
 	TableAvaibleRooms();
+}
+
+function bookRoom()
+{
+	let name=document.getElementById('Fname').value+" "+document.getElementById('Lname').value;
+	let email =document.getElementById('email').value;
+	let telNumber=document.getElementById('phoneNum').value;
+	let numAdalts=document.getElementById('Adults').value;
+	let nuChldren=document.getElementById('Children').value;
+	let StyleRoom=document.getElementById('StyleRoom').value;
+	let Arrival=document.getElementById('Arrival').value;
+	let Departure=document.getElementById('Departure').value;
+	let customer=
+	{
+		id:resrvRoom.length+1,
+		name:name,
+		email:email,
+		telNumber:telNumber,
+		numAdalts:numAdalts,
+		nuChldren:nuChldren,
+		StyleRoom:StyleRoom,
+		Arrival:Arrival,
+		Departure:Departure
+
+	}
+	let makeNote=true;
+	rooms=roomsArray.map(function(element) {
+		if(element.label==StyleRoom)
+		{
+			if(element.countRooms!=0){
+				makeNote=true;
+				element.countRooms=element.countRooms-1;
+				return element;
+			}
+			else
+			{
+				alert('No free rooms this type');
+				makeNote=false;
+				return element;
+			}
+		}
+		else
+		{
+			return element;
+		}
+	  });
+	makeNote=validateDates(Arrival,Departure)
+	if( makeNote==true)
+	{
+		localStorage.setItem(customer.id,JSON.stringify(customer));
+
+	}
+	fillclientArray();
+	TableAvaibleRooms();
+
+}
+
+
 function sortTable()
 	{
 		let typeForString=document.getElementById('typeForString').value;
@@ -284,7 +415,6 @@ function sortTable()
 				}
 		  });
 		}
-		console.log(categorySort);
 	
 		  if(categorySort!=0 && typeForNums!=0)
 		{
@@ -305,9 +435,8 @@ function sortTable()
 			
 		}
 		createTable();
-	}
+}
 	
-
 function filter()
 {
 	let figurs=''
@@ -325,7 +454,7 @@ function filter()
 			}
 		  });
 	}
-	if(filter2!=0)
+	else if(filter2!=0)
 	{
 		filterData=filterData.map(function(element) {
 			if(element!=undefined){
@@ -336,7 +465,7 @@ function filter()
 			}
 		  });
 	}
-	if(filter3!=0)
+	else if(filter3!=0)
 	{
 		filterData=filterData.map(function(element) {
 			if(element!=undefined){
@@ -347,41 +476,52 @@ function filter()
 			}
 		  });
 	}
-	for (x in filterData) 
+	if(filter3=='' && filter2=='' && filter1=='')
 	{
-		if(filterData[x]!=undefined){
-			figurs += "<figure> <img src='"+filterData[x].imgSRC+"'/><figcaption><h3>"
-			+filterData[x].label+"</h3><ul><li>"+filterData[x].bedroomNbath+"</li><li>"
-			+filterData[x].bonus+"</li><li>"+filterData[x].view+"</li></ul></figcaption></figure>"
+		createfig();
+	
+	}
+	else
+	{
+		for (x in filterData) 
+		{
+			if(filterData[x]!=undefined){
+				figurs += "<figure> <img src='"+filterData[x].imgSRC+"'/><figcaption><h3>"
+				+filterData[x].label+"</h3><ul><li>"+filterData[x].bedroomNbath+"</li><li>"
+				+filterData[x].bonus+"</li><li>"+filterData[x].view+"</li></ul></figcaption></figure>"
+			}
 		}
-		
-		
+		div.innerHTML = figurs;
+		document.getElementById("paginBar").innerHTML=null;
 	}
 		   
-	div.innerHTML = figurs;
-	document.getElementById("paginBar").innerHTML=null;
+	
 }
+
 function createfig() { 
 		let figurs=''
 		let div=document.getElementById('roomsView');
+		let selectContent='';
 	for (x in roomsArray) {
-			figurs += "<figure> <img src='"+roomsArray[x].imgSRC+"'/><figcaption><h3>"+roomsArray[x].label+"</h3><ul><li>"+roomsArray[x].bedroomNbath+"</li><li>"+roomsArray[x].bonus+"</li><li>"+roomsArray[x].view+"</li></ul></figcaption></figure>"
+		selectContent+="<option>"+roomsArray[x].label+"</option>"
+		figurs += "<figure> <img src='"+roomsArray[x].imgSRC+"'/><figcaption><h3>"+roomsArray[x].label+"</h3><ul><li>"+roomsArray[x].bedroomNbath+"</li><li>"+roomsArray[x].bonus+"</li><li>"+roomsArray[x].view+"</li><li>CHF "+roomsArray[x].price+"</li></li><li>Sum of rooms"+"  "+roomsArray[x].countRooms+"</li></ul></figcaption></figure>"
 	}
 			       
 		div.innerHTML = figurs;
+		document.getElementById('StyleRoom').innerHTML=selectContent;
 		let divBar=document.getElementById("paginBar");
 		if(divBar.value==null)
 		{
 			paginationBar();
 		}
 		pagination(0);
-	}
+}
 
 function goToForm(idForm) 
 	{ 
 		
 		idForm.scrollIntoView(true);
-	}
+}
 
 (function () {
 		var setting = {"height":540,"width":792,"zoom":17,"queryString":"Le Richemond, Rue Adhémar-Fabri, Женева, Швейцария","place_id":"ChIJf1A9c9V6jEcRC2XxGk5qiXs","satellite":false,"centerCoord":[46.20892371656499,6.148628449999989],"cid":"0x7b896a4e1af1650b","lang":"ru","cityUrl":"/switzerland/geneva","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"151711"};
@@ -516,11 +656,12 @@ function Slider(diraction)
 }
 
 
-
 	Show();
 	createfig();
 	createSPA();
 	pagination(0);
+	fillclientArray();	
 	createCategory(localStorage.lastSPACAt);
 	window.onhashchange = webUrlChange;
-	document.addEventListener("DOMContentLoaded",webUrlChange);
+	document.getElementById('book').onsubmit=bookRoom;
+	document.addEventListener("DOMContentLoaded",webUrlChange);	
