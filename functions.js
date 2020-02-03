@@ -227,7 +227,7 @@ function createCategory(x)
 		let SPAcontent='';
 		let selectOptios='';
 		console.log(x);
-		SPAcontent+="<h1>"+SPAnCategory[x].spaLabel+"</h1>"
+		SPAcontent+="<h1 title='"+SPAnCategory[x].spaLabel+"'>"+SPAnCategory[x].spaLabel+"</h1>"
 		for (y in SPAnCategory[x]['category']) {
 			console.log(y);
 			SPAcontent += "<div class='occasion'><h3>"+SPAnCategory[x]['category'][y]['label']+"</h3>"+SPAnCategory[x]['category'][y]['discription']+"</div>";
@@ -519,22 +519,9 @@ function createfig() {
 
 function goToForm(idForm) 
 	{ 
-		
+		document.getElementById(idForm).scrollIntoView(true);
 		idForm.scrollIntoView(true);
 }
-
-(function () {
-		var setting = {"height":540,"width":792,"zoom":17,"queryString":"Le Richemond, Rue Adhémar-Fabri, Женева, Швейцария","place_id":"ChIJf1A9c9V6jEcRC2XxGk5qiXs","satellite":false,"centerCoord":[46.20892371656499,6.148628449999989],"cid":"0x7b896a4e1af1650b","lang":"ru","cityUrl":"/switzerland/geneva","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"151711"};
-		var d = document;
-		var s = d.createElement('script');
-		s.src = 'https://1map.com/js/script-for-user.js?embed_id=151711';
-		s.async = true;
-		s.onload = function (e) {
-		  window.OneMap.initMap(setting)
-		};
-		var to = d.getElementsByTagName('script')[0];
-		to.parentNode.insertBefore(s, to);
-	  })();
 
 
 function Show()
@@ -555,6 +542,25 @@ function Show()
 	document.getElementById('back').style.display='none';
 }
 
+function Search()
+{
+	
+	let find=document.getElementById('findInfo').value;
+	console.log(find);
+	let id;
+	let item =document.querySelector('h1[title*="'+find+'"]');
+	document.querySelector('h1[title*="'+find+'"]').style.color='red';
+	for (let elem of document.getElementsByTagName('div')) {
+		if (elem.contains(item)) {		
+			id=elem.id
+			window.location.hash=id;
+			
+		}
+	}
+	
+	
+	
+}
 
 function Slider(diraction)
 {

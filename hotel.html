@@ -21,7 +21,7 @@
                     <li><a href="#special">Special</a>
                         <ul>
                          <li><a href="#SPA">SPA</a></li>
-                            <li><a href="">Resturan</a></li>
+                            <li><a href="#Resturan">Resturan</a></li>
                             <li><a href="#events">MEETING & EVENTS</a></li>
                         </ul>
                     </li>
@@ -31,6 +31,8 @@
         </header>
 
         <main> 
+            <input type='text' id='findInfo' placeholder='Search' onmouseout='Search()'>
+            
             <div id='breadcrumbs'></div>
             <div id='Info' class='information'>
                 <div id='slider' class='slids'>
@@ -50,7 +52,7 @@
                     </div>
                 </div>
                
-                <p><h1>About us</h1>
+                <p><h1 title="About us">About us</h1>
                     <div class="flipper">
                         <div class="front">
                                     <h3>Discover A Lakeside Escape</h3>
@@ -109,7 +111,7 @@
             </div>
 
             <div id='rooms' class='rooms'>
-                <h1>Rooms</h1>
+                <h1 title="Rooms">Rooms</h1>
                 <h2>Pre-view</h2>
                 <div>
                     <button class='centerButton' onclick="createfig()">View All</button>
@@ -196,7 +198,7 @@
             </div>
 
             <div id='special' class= special>
-                <h1>Additional services</h1>
+                <h1 title='Additional services'>Additional services</h1>
                     <div class='occasion'>
                         <h2>Resturant</h2>
                        <ul>
@@ -213,7 +215,7 @@
                             <li>– Lunch: 12pm - 2pm</li>
                             <li>– Dinner: 7pm - 10pm</li>
                         </ul>
-                        <button><a href="">LEARN MORE</a></button>
+                        <button><a href="#Resturan">LEARN MORE</a></button>
                     </div>
 
                     <div class='occasion'>
@@ -248,7 +250,7 @@
             </div>
 
             <div id='events' class='events'>
-                <h1>Meetings, Events
+                <h1 title='Meetings, Events'>Meetings, Events
                     & Outside Catering Service
                 </h1>
 
@@ -378,7 +380,7 @@
             </div>
 
             <div id='SPA' class='events'>
-                <h1>Le Spa by Sisley</h1>
+                <h1 title='Le Spa by Sisley'>Le Spa by Sisley</h1>
                 <div id='fillContent'></div>
                
             </div>
@@ -437,11 +439,58 @@
                 </form>
             </div>
 
-            <div id='Resturan' class='events'></div>
-            <div id='bookingRoom'></div>
+            <div id='Resturan' class='events'>
+                <h1 title='Le Jardin'>Le Jardin</h1>
+                <div class='occasion'>
+                    <p>NEW ! Le Jardin is opened everyday, 
+                        from Monday to Sunday for lunch (12pm-2pm) and dinner (7pm-10pm).</p>
+                    <p>
+                        Recognized as “Ambassador of The Geneva Region” and listed in 
+                        the prestigious Gault & Millau guide with the grade of 17/20, Le Jardin is an unmissable address in Geneva. Our sommelier has created an excellent wine
+                         list that accents the richness and quality of vineyards near Geneva and around Switzerland.
+                    </p>
+                    <p>
+                        Everyday for lunch, discover our market menu and our winter menu.
+                    </p>                
+                </div>
+                <div class='occasion'>
+                    <h2>Veggie mania</h2>
+                   <p>Vegetables are the stars of this 100% creative and delicious veggie menu. Enjoy the leeks from the garden in salt crust as well 
+                       as the thin tart of porcini mushroom, the crapaudine beet ravioli and the candied apple.</p>
+                    <button><a href="https://www.lerichemond.com/application/files/9715/7910/0618/Menu_vegetarien_dhiver_2020_-_Le_Jardin.pdf" target="_blank">LEARN MORE</a></button>
+                </div>
+                <div>
+                    <figure>
+                        <img src="img/2.jpg"/>
+                        <figcaption>   
+                            <h4>Private Salon</h4>
+                            <p>The restaurant has a private dining room for up to 16 guests, providing 
+                                an ideal setting for special occasions such as birthdays or exclusive business lunches.</p>
+                        </figcaption>
+                    
+                    </figure>
+                    <figure>
+                        <img src="img/6.jpg"/>
+                        <figcaption>
+                            <h4>Gastronomic Agenda</h4>
+                            <p>For the most special time of the year, Le jardin welcomes you with special menus created by our Chef Philippe Bourrel along with our Pastry Chef Sébastien Quazzola.</p>
+                        </figcaption>
+                    
+                    </figure>
+                    <figure>
+                        <img src="img/0.jpg"/>
+                        <figcaption>
+                            <h4>Winter at Le Jardin</h4>
+                            <p>Discover the gastronomy of the Chef Philippe Bourrel, with a tasty 5 course meal.</p>
+                            <p>CHF 130.-</p>
+                            <p>We recommend the same menu for everyone at the table.</p>
+                        </figcaption>   
+                    </figure>
+                </div>
+            </div>
 
             <div id='Contacts' class='events'>
-                <h1>Contact Information</h1>
+                <h1 title='Contact Information'>Contact Information</h1>
                 <div class='occasion'>
                     <h2>Le Richemond</h2>
                     <ul>
@@ -461,9 +510,7 @@
                 </div>
                 <div class='occasion'>
                     <h2>Location</h2>   
-                    <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
-                        <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
-                        <a href="https://1map.com/ru/map-embed?embed_id=151711">1 Map</a></div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2761.0745583290236!2d6.1464355149795455!3d46.20897179146006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c7ad5733d507f%3A0x7b896a4e1af1650b!2sLe%20Richemond!5e0!3m2!1sru!2sua!4v1580708678336!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 </div>
                 <form class='formReserv'>
                     <h2>Get in touch</h2>

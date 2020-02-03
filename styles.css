@@ -22,7 +22,7 @@
 @media screen and (min-width: 834px)
  { 
     .events figure{width: 23%;}
-    
+    .occasion{ width: 28%;}
    
 
  }
@@ -294,7 +294,7 @@ figcaption{text-align: left;}
     background: white;
     margin: 10px;
     padding: 20px;
-    width: 28%;
+   
     overflow: scroll;
     height: 400px;
     display: inline-block;
@@ -405,13 +405,15 @@ input:focus {
 #Contacts a{color:black;}
 #Contacts .occasion
 {
-    width: fit-content;
-    margin: auto;
+     
     margin-top: 10px;
     margin-bottom: 20px;
+    display: inline-block;
+     width: fit-content;
+    margin: auto;
+   
     
 }
-#Contacts{display: grid;}
 
 textarea
 {
@@ -470,4 +472,8 @@ main select
 #breadcrumbs a:hover
 {
     color:rgba(240, 36, 36, 0.849);
+}
+#Resturan figure img {
+    width: 100%;
+    height: 300px;
 }
